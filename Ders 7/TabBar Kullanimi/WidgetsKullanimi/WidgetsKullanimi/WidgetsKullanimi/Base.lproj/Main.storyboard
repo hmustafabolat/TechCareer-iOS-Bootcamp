@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22152" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22127"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WidgetsKullanimi" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNU-N9-NvR">
+                                <rect key="frame" x="176" y="75" width="41.333333333333343" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Bilgilerini Giriniz..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqO-uy-6yq">
+                                <rect key="frame" x="50" y="111.33333333333331" width="293" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erb-rO-wby">
+                                <rect key="frame" x="169" y="161.33333333333334" width="55" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Oku"/>
+                                <connections>
+                                    <action selector="buttonOku:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljS-nl-Hw4"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mutlu_resim" translatesAutoresizingMaskIntoConstraints="NO" id="m1v-Xa-ITK">
+                                <rect key="frame" x="160.66666666666666" y="211.66666666666666" width="72" height="71.999999999999972"/>
+                                <color key="tintColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="Vbd-od-zGh"/>
+                                    <constraint firstAttribute="height" constant="72" id="pgH-yj-Xn6"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="fAN-pj-7qY">
+                                <rect key="frame" x="85.333333333333329" y="299.66666666666669" width="222.33333333333337" height="34.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hp0-bA-KxO">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.666666666666671" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Mutlu"/>
+                                        <connections>
+                                            <action selector="buttonMutlu:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6K-nF-6Vg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmQ-cU-hCP">
+                                        <rect key="frame" x="148.66666666666669" y="0.0" width="73.666666666666686" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Üzgün"/>
+                                        <connections>
+                                            <action selector="buttonUzgun:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lbZ-J7-Hbc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xXy-eL-zPg">
+                                <rect key="frame" x="172" y="350" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchDegisim:" destination="BYZ-38-t0r" eventType="valueChanged" id="VXx-VA-qmo"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVU-RE-XZ1">
+                                <rect key="frame" x="176" y="397" width="41.333333333333343" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKy-L0-5Vg">
+                                <rect key="frame" x="159" y="767.66666666666663" width="75.333333333333314" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Göster"/>
+                                <connections>
+                                    <action selector="buttonGoster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMs-we-CTi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fAN-pj-7qY" firstAttribute="top" secondItem="m1v-Xa-ITK" secondAttribute="bottom" constant="16" id="1Bk-fA-COu"/>
+                            <constraint firstItem="BNU-N9-NvR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="29v-1k-lin"/>
+                            <constraint firstItem="oqO-uy-6yq" firstAttribute="top" secondItem="BNU-N9-NvR" secondAttribute="bottom" constant="16" id="BLT-ft-tpD"/>
+                            <constraint firstItem="m1v-Xa-ITK" firstAttribute="top" secondItem="erb-rO-wby" secondAttribute="bottom" constant="16" id="DIr-eN-89k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fKy-L0-5Vg" secondAttribute="bottom" constant="16" id="Dq4-lA-uqx"/>
+                            <constraint firstItem="xXy-eL-zPg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Khs-NC-x3M"/>
+                            <constraint firstItem="xXy-eL-zPg" firstAttribute="top" secondItem="fAN-pj-7qY" secondAttribute="bottom" constant="16" id="MbP-lZ-jsx"/>
+                            <constraint firstItem="m1v-Xa-ITK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PYf-Gy-iGw"/>
+                            <constraint firstItem="erb-rO-wby" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qhr-6C-O5i"/>
+                            <constraint firstItem="fAN-pj-7qY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U16-zX-eQO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oqO-uy-6yq" secondAttribute="trailing" constant="50" id="Vqb-A9-wJc"/>
+                            <constraint firstItem="fKy-L0-5Vg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e63-gI-9Rf"/>
+                            <constraint firstItem="aVU-RE-XZ1" firstAttribute="top" secondItem="xXy-eL-zPg" secondAttribute="bottom" constant="16" id="oFh-sT-XyO"/>
+                            <constraint firstItem="aVU-RE-XZ1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pl9-jH-aog"/>
+                            <constraint firstItem="BNU-N9-NvR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="siD-LH-0hD"/>
+                            <constraint firstItem="oqO-uy-6yq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="uSw-ZE-CHH"/>
+                            <constraint firstItem="erb-rO-wby" firstAttribute="top" secondItem="oqO-uy-6yq" secondAttribute="bottom" constant="16" id="wQF-Lb-pM1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="m1v-Xa-ITK" id="MYz-4a-kPC"/>
+                        <outlet property="labelSonuc" destination="BNU-N9-NvR" id="nhk-YC-KEv"/>
+                        <outlet property="labelSwitch" destination="aVU-RE-XZ1" id="iGz-0E-09f"/>
+                        <outlet property="mSwitch" destination="xXy-eL-zPg" id="TLX-CT-D2p"/>
+                        <outlet property="textFieldGirdi" destination="oqO-uy-6yq" id="asG-SC-7ui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mutlu_resim" width="13" height="13"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
