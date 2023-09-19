@@ -31,6 +31,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelStepper: UILabel!
     
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if mSwitch.isOn{
@@ -42,6 +44,9 @@ class ViewController: UIViewController {
         let secilenIndeks = segmentedControl.selectedSegmentIndex
         let secilenKategori = segmentedControl.titleForSegment(at: secilenIndeks)
         labelSegmented.text = "Seçim: \(secilenKategori!)"
+        labelSlider.text = String(Int(slider.value))
+        labelStepper.text = String(Int(stepper.value))
+        indicator.isHidden = true
     }
 
     @IBAction func buttonMutlu(_ sender: Any) {
@@ -68,7 +73,18 @@ class ViewController: UIViewController {
         labelSlider.text = String(Int(sender.value))
     }
     
-    @IBAction func stepperDegisim(_ sender: Any) {
+    @IBAction func stepperDegisim(_ sender: UIStepper) {
+        labelStepper.text = String(Int(sender.value))
+    }
+    
+    @IBAction func buttonBasla(_ sender: Any) {
+        indicator.isHidden = false
+        indicator.startAnimating()
+    }
+    
+    @IBAction func buttonDur(_ sender: Any) {
+        indicator.isHidden = false
+        indicator.stopAnimating()
     }
     
     @IBAction func buttonGoster(_ sender: Any) {
@@ -78,6 +94,7 @@ class ViewController: UIViewController {
         print("Seçilen : \(secilenIndeks)")
         print("Seçilen : \(secilenKategori!)")
         print("Slider : \(slider.value)")
+        print("Stepper : \(stepper.value)")
     }
     
     @IBAction func switchDegisim(_ sender: UISwitch) {
