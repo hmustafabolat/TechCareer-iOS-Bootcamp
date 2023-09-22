@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     var girilenSayilar = ""
     
     @IBOutlet weak var hesaplananSonuc: UILabel!
-    var sonuc = 0
+    var sonuc:Double = 0.0
     
     @IBOutlet weak var buttonToplama: UIButton!
     
@@ -29,23 +29,33 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonToplama(_ sender: UIButton) {
-        if !girilenSayilar.isEmpty && !girilenSayilar.hasSuffix("+"){
-            
-        }
+        if !girilenSayilar.isEmpty && !girilenSayilar.hasSuffix("+") {
+                girilenSayilar += "+"
+                hesaplananToplananlar.text = girilenSayilar
+            }
     }
     
     @IBAction func buttons(_ sender: UIButton) {
-        girilenSayilar += (sender.titleLabel?.text)!
-        hesaplananToplananlar.text = girilenSayilar
-        toplamaButtonAcik()
+        if let buttonText = sender.titleLabel?.text, buttonText != "."{
+            if let number = Double(buttonText){
+                girilenSayilar += buttonText
+                hesaplananToplananlar.text = girilenSayilar
+                toplamaButtonAcik()
+            }
+        }
+        else if let buttonTextSifir = sender.titleLabel?.text, buttonTextSifir == "." && !girilenSayilar.contains("."){
+            girilenSayilar += (sender.titleLabel?.text)!
+            hesaplananToplananlar.text = girilenSayilar
+            toplamaButtonAcik()
+        }
     }
     @IBAction func buttonEsittir(_ sender: Any) {
         if !girilenSayilar.isEmpty{
             let components = girilenSayilar.components(separatedBy: "+")
-            var total = 0
+            var total:Double = 0.0
             
             for component in components {
-                if let number = Int(component){
+                if let number = Double(component){
                     total += number
                 }
             }
@@ -59,7 +69,7 @@ class ViewController: UIViewController {
     func clearInput(){
         girilenSayilar = ""
         hesaplananToplananlar.text = ""
-        sonuc = 0
+        sonuc = 0.0
         hesaplananSonuc.text = "0"
     }
     
