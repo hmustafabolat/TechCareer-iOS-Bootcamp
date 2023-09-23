@@ -30,16 +30,15 @@ class ViewController: UIViewController {
     
     @IBAction func buttonToplama(_ sender: UIButton) {
         if !girilenSayilar.isEmpty && !girilenSayilar.hasSuffix("+") {
-                
-            }
+                        hesaplananToplananlar.text = girilenSayilar
+                        toplamaButtonKapali()
+        }
     }
     
     @IBAction func buttons(_ sender: UIButton) {
-        
                 girilenSayilar += (sender.titleLabel?.text)!
                 hesaplananToplananlar.text = girilenSayilar
                 toplamaButtonAcik()
-         
     }
     @IBAction func buttonEsittir(_ sender: Any) {
         if !girilenSayilar.isEmpty{
