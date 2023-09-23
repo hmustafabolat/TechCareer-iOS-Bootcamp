@@ -30,24 +30,16 @@ class ViewController: UIViewController {
     
     @IBAction func buttonToplama(_ sender: UIButton) {
         if !girilenSayilar.isEmpty && !girilenSayilar.hasSuffix("+") {
-                girilenSayilar += "+"
-                hesaplananToplananlar.text = girilenSayilar
+                
             }
     }
     
     @IBAction func buttons(_ sender: UIButton) {
-        if let buttonText = sender.titleLabel?.text, buttonText != "."{
-            if let number = Double(buttonText){
-                girilenSayilar += buttonText
+        
+                girilenSayilar += (sender.titleLabel?.text)!
                 hesaplananToplananlar.text = girilenSayilar
                 toplamaButtonAcik()
-            }
-        }
-        else if let buttonTextSifir = sender.titleLabel?.text, buttonTextSifir == "." && !girilenSayilar.contains("."){
-            girilenSayilar += (sender.titleLabel?.text)!
-            hesaplananToplananlar.text = girilenSayilar
-            toplamaButtonAcik()
-        }
+         
     }
     @IBAction func buttonEsittir(_ sender: Any) {
         if !girilenSayilar.isEmpty{
