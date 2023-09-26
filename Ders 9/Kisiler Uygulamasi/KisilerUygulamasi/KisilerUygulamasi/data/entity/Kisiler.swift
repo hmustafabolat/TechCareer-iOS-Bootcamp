@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class Kisiler{
     var kisi_id:Int?
     var kisi_ad:String?

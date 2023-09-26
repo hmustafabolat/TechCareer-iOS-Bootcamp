@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class Anasayfa: UIViewController{
     
@@ -14,23 +15,22 @@ class Anasayfa: UIViewController{
     
     var kisilerListesi = [Kisiler]()
     
+    var viewModel = AnasayfaViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self //anasayfa -> UISearchBarDelegate
         kisilerTableView.delegate = self
         kisilerTableView.dataSource = self
         
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Ahmet", kisi_tel: "11111")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "Mehmet", kisi_tel: "2222")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "Ali", kisi_tel: "3333")
-        let k4 = Kisiler(kisi_id: 4, kisi_ad: "Zeynep", kisi_tel: "44444")
-        kisilerListesi.append(k1)//0.
-        kisilerListesi.append(k2)//1.
-        kisilerListesi.append(k3)//2.
+        _ = viewModel.kisilerListesi.subscribe(onNext: { liste in
+            self.kisilerListesi = liste
+            self.kisilerTableView.reloadData()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Anasayfaya dönüldü")
+        viewModel.kisileriYukle()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -47,7 +47,7 @@ class Anasayfa: UIViewController{
 
 extension Anasayfa : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Kişi Ara : \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
@@ -81,7 +81,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource{
             alert.addAction(iptalAction)
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){
                 action in
-                print("Kişi sil: \(kisi.kisi_ad!)")
+                self.viewModel.sil(kisi_id: kisi.kisi_id!)
             }
             alert.addAction(evetAction)
             

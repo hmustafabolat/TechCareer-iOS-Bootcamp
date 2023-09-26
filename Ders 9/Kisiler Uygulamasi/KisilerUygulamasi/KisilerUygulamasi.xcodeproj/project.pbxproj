@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF860D452AC354B8009DDE35 /* KisilerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D442AC354B8009DDE35 /* KisilerDaoRepository.swift */; };
+		CF860D482AC354FD009DDE35 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D472AC354FD009DDE35 /* AnasayfaViewModel.swift */; };
+		CF860D4A2AC35518009DDE35 /* KisiKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D492AC35518009DDE35 /* KisiKayitViewModel.swift */; };
+		CF860D4C2AC35535009DDE35 /* KisiDetayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D4B2AC35535009DDE35 /* KisiDetayViewModel.swift */; };
+		CF860D642AC357E8009DDE35 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CF860D632AC357E8009DDE35 /* RxSwift */; };
 		CFD0782D2ABCA2A90023742C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0782C2ABCA2A90023742C /* AppDelegate.swift */; };
 		CFD0782F2ABCA2A90023742C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0782E2ABCA2A90023742C /* SceneDelegate.swift */; };
 		CFD078312ABCA2A90023742C /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD078302ABCA2A90023742C /* Anasayfa.swift */; };
@@ -20,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF860D442AC354B8009DDE35 /* KisilerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDaoRepository.swift; sourceTree = "<group>"; };
+		CF860D472AC354FD009DDE35 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		CF860D492AC35518009DDE35 /* KisiKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayitViewModel.swift; sourceTree = "<group>"; };
+		CF860D4B2AC35535009DDE35 /* KisiDetayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetayViewModel.swift; sourceTree = "<group>"; };
 		CFD078292ABCA2A90023742C /* KisilerUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisilerUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFD0782C2ABCA2A90023742C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CFD0782E2ABCA2A90023742C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,12 +48,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF860D642AC357E8009DDE35 /* RxSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF860D432AC35494009DDE35 /* repo */ = {
+			isa = PBXGroup;
+			children = (
+				CF860D442AC354B8009DDE35 /* KisilerDaoRepository.swift */,
+			);
+			path = repo;
+			sourceTree = "<group>";
+		};
+		CF860D462AC354EC009DDE35 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				CF860D472AC354FD009DDE35 /* AnasayfaViewModel.swift */,
+				CF860D492AC35518009DDE35 /* KisiKayitViewModel.swift */,
+				CF860D4B2AC35535009DDE35 /* KisiDetayViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
 		CFD078202ABCA2A80023742C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +107,7 @@
 		CFD078402ABCA3670023742C /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				CF860D462AC354EC009DDE35 /* viewmodel */,
 				CFD0784A2ABCB7420023742C /* tableview */,
 				CFD078412ABCA3870023742C /* views */,
 			);
@@ -98,6 +127,7 @@
 		CFD078422ABCA3960023742C /* data */ = {
 			isa = PBXGroup;
 			children = (
+				CF860D432AC35494009DDE35 /* repo */,
 				CFD078472ABCA9380023742C /* entity */,
 			);
 			path = data;
@@ -135,6 +165,9 @@
 			dependencies = (
 			);
 			name = KisilerUygulamasi;
+			packageProductDependencies = (
+				CF860D632AC357E8009DDE35 /* RxSwift */,
+			);
 			productName = KisilerUygulamasi;
 			productReference = CFD078292ABCA2A90023742C /* KisilerUygulamasi.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +196,9 @@
 				Base,
 			);
 			mainGroup = CFD078202ABCA2A80023742C;
+			packageReferences = (
+				CF860D622AC357E8009DDE35 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = CFD0782A2ABCA2A90023742C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,9 +230,13 @@
 				CFD0784C2ABCB7700023742C /* KisilerHucre.swift in Sources */,
 				CFD078462ABCA43A0023742C /* KisiDetay.swift in Sources */,
 				CFD078312ABCA2A90023742C /* Anasayfa.swift in Sources */,
+				CF860D452AC354B8009DDE35 /* KisilerDaoRepository.swift in Sources */,
+				CF860D482AC354FD009DDE35 /* AnasayfaViewModel.swift in Sources */,
+				CF860D4C2AC35535009DDE35 /* KisiDetayViewModel.swift in Sources */,
 				CFD0782D2ABCA2A90023742C /* AppDelegate.swift in Sources */,
 				CFD0782F2ABCA2A90023742C /* SceneDelegate.swift in Sources */,
 				CFD078492ABCA9500023742C /* Kisiler.swift in Sources */,
+				CF860D4A2AC35518009DDE35 /* KisiKayitViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CF860D622AC357E8009DDE35 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CF860D632AC357E8009DDE35 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CF860D622AC357E8009DDE35 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CFD078212ABCA2A80023742C /* Project object */;
 }
