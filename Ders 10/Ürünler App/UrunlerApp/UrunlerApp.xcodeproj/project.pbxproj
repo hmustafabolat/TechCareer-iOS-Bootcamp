@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CF860D052AC3297C009DDE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D042AC3297C009DDE35 /* AppDelegate.swift */; };
 		CF860D072AC3297C009DDE35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D062AC3297C009DDE35 /* SceneDelegate.swift */; };
-		CF860D092AC3297C009DDE35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D082AC3297C009DDE35 /* ViewController.swift */; };
+		CF860D092AC3297C009DDE35 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D082AC3297C009DDE35 /* Anasayfa.swift */; };
 		CF860D0C2AC3297C009DDE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF860D0A2AC3297C009DDE35 /* Main.storyboard */; };
 		CF860D0E2AC32980009DDE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF860D0D2AC32980009DDE35 /* Assets.xcassets */; };
 		CF860D112AC32980009DDE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF860D0F2AC32980009DDE35 /* LaunchScreen.storyboard */; };
+		CF860D192AC32A08009DDE35 /* Urunler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D182AC32A08009DDE35 /* Urunler.swift */; };
+		CF860D1B2AC32CA8009DDE35 /* UrunlerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D1A2AC32CA8009DDE35 /* UrunlerHucre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF860D012AC3297C009DDE35 /* UrunlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrunlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF860D042AC3297C009DDE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF860D062AC3297C009DDE35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF860D082AC3297C009DDE35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CF860D082AC3297C009DDE35 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
 		CF860D0B2AC3297C009DDE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF860D0D2AC32980009DDE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF860D102AC32980009DDE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF860D122AC32980009DDE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF860D182AC32A08009DDE35 /* Urunler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urunler.swift; sourceTree = "<group>"; };
+		CF860D1A2AC32CA8009DDE35 /* UrunlerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerHucre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,9 @@
 			children = (
 				CF860D042AC3297C009DDE35 /* AppDelegate.swift */,
 				CF860D062AC3297C009DDE35 /* SceneDelegate.swift */,
-				CF860D082AC3297C009DDE35 /* ViewController.swift */,
+				CF860D082AC3297C009DDE35 /* Anasayfa.swift */,
+				CF860D182AC32A08009DDE35 /* Urunler.swift */,
+				CF860D1A2AC32CA8009DDE35 /* UrunlerHucre.swift */,
 				CF860D0A2AC3297C009DDE35 /* Main.storyboard */,
 				CF860D0D2AC32980009DDE35 /* Assets.xcassets */,
 				CF860D0F2AC32980009DDE35 /* LaunchScreen.storyboard */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF860D092AC3297C009DDE35 /* ViewController.swift in Sources */,
+				CF860D092AC3297C009DDE35 /* Anasayfa.swift in Sources */,
+				CF860D1B2AC32CA8009DDE35 /* UrunlerHucre.swift in Sources */,
+				CF860D192AC32A08009DDE35 /* Urunler.swift in Sources */,
 				CF860D052AC3297C009DDE35 /* AppDelegate.swift in Sources */,
 				CF860D072AC3297C009DDE35 /* SceneDelegate.swift in Sources */,
 			);
