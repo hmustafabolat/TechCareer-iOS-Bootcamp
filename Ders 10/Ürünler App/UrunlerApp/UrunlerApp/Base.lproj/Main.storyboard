@@ -101,11 +101,60 @@
                     <navigationItem key="navigationItem" title="Ürünler" id="gTy-Bm-QQG"/>
                     <connections>
                         <outlet property="urunlerTableView" destination="8xG-kk-vSN" id="wkS-fb-E3K"/>
+                        <segue destination="tcp-tf-srb" kind="show" identifier="toDetay" id="pMj-7h-zNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1063.3587786259541" y="4.9295774647887329"/>
+        </scene>
+        <!--Detay Sayfa-->
+        <scene sceneID="8NP-cy-Jgv">
+            <objects>
+                <viewController id="tcp-tf-srb" customClass="DetaySayfa" customModule="UrunlerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QX1-qJ-uDW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-6h-hDM">
+                                <rect key="frame" x="68.666666666666686" y="163" width="256" height="526.33333333333337"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telefon" translatesAutoresizingMaskIntoConstraints="NO" id="C9u-tx-cig">
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="256"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xa9-uP-9Q9">
+                                        <rect key="frame" x="0.0" y="356" width="256" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-ES-h5u">
+                                        <rect key="frame" x="0.0" y="492" width="256" height="34.333333333333371"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle"/>
+                                        <connections>
+                                            <action selector="buttonSepeteEkle:" destination="tcp-tf-srb" eventType="touchUpInside" id="F2i-2V-8ts"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BqD-mU-Wdd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hbs-6h-hDM" firstAttribute="centerX" secondItem="QX1-qJ-uDW" secondAttribute="centerX" id="Ulz-HP-1vp"/>
+                            <constraint firstItem="Hbs-6h-hDM" firstAttribute="centerY" secondItem="QX1-qJ-uDW" secondAttribute="centerY" id="zGT-7N-bki"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HQt-3n-bfv"/>
+                    <connections>
+                        <outlet property="imageViewUrun" destination="C9u-tx-cig" id="HcP-HA-B2v"/>
+                        <outlet property="urunFiyat" destination="xa9-uP-9Q9" id="f0p-0M-vFU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Acc-3g-vO2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wd4-oN-mgH">

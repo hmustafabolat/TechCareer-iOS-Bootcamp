@@ -7,33 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CF74937C2AC386CE00ED4B45 /* DetaySayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74937B2AC386CE00ED4B45 /* DetaySayfa.swift */; };
-		CF860D052AC3297C009DDE35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D042AC3297C009DDE35 /* AppDelegate.swift */; };
-		CF860D072AC3297C009DDE35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D062AC3297C009DDE35 /* SceneDelegate.swift */; };
-		CF860D092AC3297C009DDE35 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D082AC3297C009DDE35 /* Anasayfa.swift */; };
-		CF860D0C2AC3297C009DDE35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF860D0A2AC3297C009DDE35 /* Main.storyboard */; };
-		CF860D0E2AC32980009DDE35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF860D0D2AC32980009DDE35 /* Assets.xcassets */; };
-		CF860D112AC32980009DDE35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF860D0F2AC32980009DDE35 /* LaunchScreen.storyboard */; };
-		CF860D192AC32A08009DDE35 /* Urunler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D182AC32A08009DDE35 /* Urunler.swift */; };
-		CF860D1B2AC32CA8009DDE35 /* UrunlerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D1A2AC32CA8009DDE35 /* UrunlerHucre.swift */; };
+		CF74938A2AC38BD000ED4B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7493892AC38BD000ED4B45 /* AppDelegate.swift */; };
+		CF74938C2AC38BD000ED4B45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74938B2AC38BD000ED4B45 /* SceneDelegate.swift */; };
+		CF74938E2AC38BD000ED4B45 /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74938D2AC38BD000ED4B45 /* Anasayfa.swift */; };
+		CF7493912AC38BD000ED4B45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF74938F2AC38BD000ED4B45 /* Main.storyboard */; };
+		CF7493932AC38BD500ED4B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7493922AC38BD500ED4B45 /* Assets.xcassets */; };
+		CF7493962AC38BD500ED4B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7493942AC38BD500ED4B45 /* LaunchScreen.storyboard */; };
+		CF74939E2AC38CE300ED4B45 /* Filmler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74939D2AC38CE300ED4B45 /* Filmler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CF74937B2AC386CE00ED4B45 /* DetaySayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaySayfa.swift; sourceTree = "<group>"; };
-		CF860D012AC3297C009DDE35 /* UrunlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UrunlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF860D042AC3297C009DDE35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF860D062AC3297C009DDE35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CF860D082AC3297C009DDE35 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
-		CF860D0B2AC3297C009DDE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CF860D0D2AC32980009DDE35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CF860D102AC32980009DDE35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CF860D122AC32980009DDE35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CF860D182AC32A08009DDE35 /* Urunler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urunler.swift; sourceTree = "<group>"; };
-		CF860D1A2AC32CA8009DDE35 /* UrunlerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrunlerHucre.swift; sourceTree = "<group>"; };
+		CF7493862AC38BD000ED4B45 /* FilmlerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmlerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF7493892AC38BD000ED4B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CF74938B2AC38BD000ED4B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CF74938D2AC38BD000ED4B45 /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
+		CF7493902AC38BD000ED4B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CF7493922AC38BD500ED4B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CF7493952AC38BD500ED4B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CF7493972AC38BD500ED4B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF74939D2AC38CE300ED4B45 /* Filmler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filmler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CF860CFE2AC3297C009DDE35 /* Frameworks */ = {
+		CF7493832AC38BD000ED4B45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,75 +39,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CF860CF82AC3297C009DDE35 = {
+		CF74937D2AC38BD000ED4B45 = {
 			isa = PBXGroup;
 			children = (
-				CF860D032AC3297C009DDE35 /* UrunlerApp */,
-				CF860D022AC3297C009DDE35 /* Products */,
+				CF7493882AC38BD000ED4B45 /* FilmlerApp */,
+				CF7493872AC38BD000ED4B45 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CF860D022AC3297C009DDE35 /* Products */ = {
+		CF7493872AC38BD000ED4B45 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CF860D012AC3297C009DDE35 /* UrunlerApp.app */,
+				CF7493862AC38BD000ED4B45 /* FilmlerApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CF860D032AC3297C009DDE35 /* UrunlerApp */ = {
+		CF7493882AC38BD000ED4B45 /* FilmlerApp */ = {
 			isa = PBXGroup;
 			children = (
-				CF860D042AC3297C009DDE35 /* AppDelegate.swift */,
-				CF860D062AC3297C009DDE35 /* SceneDelegate.swift */,
-				CF860D082AC3297C009DDE35 /* Anasayfa.swift */,
-				CF860D182AC32A08009DDE35 /* Urunler.swift */,
-				CF860D1A2AC32CA8009DDE35 /* UrunlerHucre.swift */,
-				CF74937B2AC386CE00ED4B45 /* DetaySayfa.swift */,
-				CF860D0A2AC3297C009DDE35 /* Main.storyboard */,
-				CF860D0D2AC32980009DDE35 /* Assets.xcassets */,
-				CF860D0F2AC32980009DDE35 /* LaunchScreen.storyboard */,
-				CF860D122AC32980009DDE35 /* Info.plist */,
+				CF7493892AC38BD000ED4B45 /* AppDelegate.swift */,
+				CF74938B2AC38BD000ED4B45 /* SceneDelegate.swift */,
+				CF74938D2AC38BD000ED4B45 /* Anasayfa.swift */,
+				CF74939D2AC38CE300ED4B45 /* Filmler.swift */,
+				CF74938F2AC38BD000ED4B45 /* Main.storyboard */,
+				CF7493922AC38BD500ED4B45 /* Assets.xcassets */,
+				CF7493942AC38BD500ED4B45 /* LaunchScreen.storyboard */,
+				CF7493972AC38BD500ED4B45 /* Info.plist */,
 			);
-			path = UrunlerApp;
+			path = FilmlerApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CF860D002AC3297C009DDE35 /* UrunlerApp */ = {
+		CF7493852AC38BD000ED4B45 /* FilmlerApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CF860D152AC32980009DDE35 /* Build configuration list for PBXNativeTarget "UrunlerApp" */;
+			buildConfigurationList = CF74939A2AC38BD500ED4B45 /* Build configuration list for PBXNativeTarget "FilmlerApp" */;
 			buildPhases = (
-				CF860CFD2AC3297C009DDE35 /* Sources */,
-				CF860CFE2AC3297C009DDE35 /* Frameworks */,
-				CF860CFF2AC3297C009DDE35 /* Resources */,
+				CF7493822AC38BD000ED4B45 /* Sources */,
+				CF7493832AC38BD000ED4B45 /* Frameworks */,
+				CF7493842AC38BD000ED4B45 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = UrunlerApp;
-			productName = UrunlerApp;
-			productReference = CF860D012AC3297C009DDE35 /* UrunlerApp.app */;
+			name = FilmlerApp;
+			productName = FilmlerApp;
+			productReference = CF7493862AC38BD000ED4B45 /* FilmlerApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CF860CF92AC3297C009DDE35 /* Project object */ = {
+		CF74937E2AC38BD000ED4B45 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
-					CF860D002AC3297C009DDE35 = {
+					CF7493852AC38BD000ED4B45 = {
 						CreatedOnToolsVersion = 15.0;
 					};
 				};
 			};
-			buildConfigurationList = CF860CFC2AC3297C009DDE35 /* Build configuration list for PBXProject "UrunlerApp" */;
+			buildConfigurationList = CF7493812AC38BD000ED4B45 /* Build configuration list for PBXProject "FilmlerApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,58 +113,56 @@
 				en,
 				Base,
 			);
-			mainGroup = CF860CF82AC3297C009DDE35;
-			productRefGroup = CF860D022AC3297C009DDE35 /* Products */;
+			mainGroup = CF74937D2AC38BD000ED4B45;
+			productRefGroup = CF7493872AC38BD000ED4B45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CF860D002AC3297C009DDE35 /* UrunlerApp */,
+				CF7493852AC38BD000ED4B45 /* FilmlerApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CF860CFF2AC3297C009DDE35 /* Resources */ = {
+		CF7493842AC38BD000ED4B45 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF860D112AC32980009DDE35 /* LaunchScreen.storyboard in Resources */,
-				CF860D0E2AC32980009DDE35 /* Assets.xcassets in Resources */,
-				CF860D0C2AC3297C009DDE35 /* Main.storyboard in Resources */,
+				CF7493962AC38BD500ED4B45 /* LaunchScreen.storyboard in Resources */,
+				CF7493932AC38BD500ED4B45 /* Assets.xcassets in Resources */,
+				CF7493912AC38BD000ED4B45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CF860CFD2AC3297C009DDE35 /* Sources */ = {
+		CF7493822AC38BD000ED4B45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF860D092AC3297C009DDE35 /* Anasayfa.swift in Sources */,
-				CF860D1B2AC32CA8009DDE35 /* UrunlerHucre.swift in Sources */,
-				CF860D192AC32A08009DDE35 /* Urunler.swift in Sources */,
-				CF860D052AC3297C009DDE35 /* AppDelegate.swift in Sources */,
-				CF74937C2AC386CE00ED4B45 /* DetaySayfa.swift in Sources */,
-				CF860D072AC3297C009DDE35 /* SceneDelegate.swift in Sources */,
+				CF74938E2AC38BD000ED4B45 /* Anasayfa.swift in Sources */,
+				CF74938A2AC38BD000ED4B45 /* AppDelegate.swift in Sources */,
+				CF74938C2AC38BD000ED4B45 /* SceneDelegate.swift in Sources */,
+				CF74939E2AC38CE300ED4B45 /* Filmler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF860D0A2AC3297C009DDE35 /* Main.storyboard */ = {
+		CF74938F2AC38BD000ED4B45 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CF860D0B2AC3297C009DDE35 /* Base */,
+				CF7493902AC38BD000ED4B45 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		CF860D0F2AC32980009DDE35 /* LaunchScreen.storyboard */ = {
+		CF7493942AC38BD500ED4B45 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CF860D102AC32980009DDE35 /* Base */,
+				CF7493952AC38BD500ED4B45 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -178,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CF860D132AC32980009DDE35 /* Debug */ = {
+		CF7493982AC38BD500ED4B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -241,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		CF860D142AC32980009DDE35 /* Release */ = {
+		CF7493992AC38BD500ED4B45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +289,7 @@
 			};
 			name = Release;
 		};
-		CF860D162AC32980009DDE35 /* Debug */ = {
+		CF74939B2AC38BD500ED4B45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -306,7 +298,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SZN854MBPY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UrunlerApp/Info.plist;
+				INFOPLIST_FILE = FilmlerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.info.UrunlerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.info.FilmlerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -325,7 +317,7 @@
 			};
 			name = Debug;
 		};
-		CF860D172AC32980009DDE35 /* Release */ = {
+		CF74939C2AC38BD500ED4B45 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -334,7 +326,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = SZN854MBPY;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = UrunlerApp/Info.plist;
+				INFOPLIST_FILE = FilmlerApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -345,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.info.UrunlerApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.info.FilmlerApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -356,25 +348,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CF860CFC2AC3297C009DDE35 /* Build configuration list for PBXProject "UrunlerApp" */ = {
+		CF7493812AC38BD000ED4B45 /* Build configuration list for PBXProject "FilmlerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF860D132AC32980009DDE35 /* Debug */,
-				CF860D142AC32980009DDE35 /* Release */,
+				CF7493982AC38BD500ED4B45 /* Debug */,
+				CF7493992AC38BD500ED4B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CF860D152AC32980009DDE35 /* Build configuration list for PBXNativeTarget "UrunlerApp" */ = {
+		CF74939A2AC38BD500ED4B45 /* Build configuration list for PBXNativeTarget "FilmlerApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CF860D162AC32980009DDE35 /* Debug */,
-				CF860D172AC32980009DDE35 /* Release */,
+				CF74939B2AC38BD500ED4B45 /* Debug */,
+				CF74939C2AC38BD500ED4B45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CF860CF92AC3297C009DDE35 /* Project object */;
+	rootObject = CF74937E2AC38BD000ED4B45 /* Project object */;
 }

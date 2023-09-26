@@ -36,12 +36,13 @@ class Anasayfa: UIViewController {
     }
 }
 
-extension Anasayfa : UITableViewDelegate, UITableViewDataSource{
+extension Anasayfa : UITableViewDelegate, UITableViewDataSource, HucreProtocol{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return urunlerListesi.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let hucre = tableView.dequeueReusableCell(withIdentifier: "urunlerHucre") as! UrunlerHucre
         
         let urun = urunlerListesi [indexPath.row]
@@ -51,7 +52,45 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource{
         hucre.labelUrunFiyat.text = "\(urun.fiyat!) ₺"
         hucre.backgroundColor = UIColor(white: 0.95, alpha: 1)
         hucre.arkaplan.layer.cornerRadius = 10
+        
+        hucre.selectionStyle = .none
+        
+        hucre.indexPath = indexPath
+        hucre.hucreProtocol = self 
+        
         return hucre
     }
     
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let urun = urunlerListesi[indexPath.row]
+        
+        let silAction = UIContextualAction(style: .destructive, title: "Sil"){ ca, v, b in
+            print("\(urun.ad!) silindi")
+        }
+        
+        let duzenleAction = UIContextualAction(style: .normal, title: "Düzenle"){  ca, v, b in
+            print("\(urun.ad!) düzenlendi")
+        }
+        
+        return UISwipeActionsConfiguration(actions: [silAction,duzenleAction])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let urun = urunlerListesi[indexPath.row]
+        performSegue(withIdentifier: "toDetay", sender: urun)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetay" {
+            if let urun = sender as? Urunler {
+                let gidilecekVC = segue.destination as! DetaySayfa
+                gidilecekVC.urun = urun
+            }
+        }
+    }
+    
+    func sepeteEkleTiklandi(indexPath: IndexPath) {
+        let urun = urunlerListesi[indexPath.row]
+        print("Anasayfa : \(urun.ad!) sepete eklendi")
+    }
 }
