@@ -14,6 +14,8 @@
 		CF7493932AC38BD500ED4B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF7493922AC38BD500ED4B45 /* Assets.xcassets */; };
 		CF7493962AC38BD500ED4B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF7493942AC38BD500ED4B45 /* LaunchScreen.storyboard */; };
 		CF74939E2AC38CE300ED4B45 /* Filmler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF74939D2AC38CE300ED4B45 /* Filmler.swift */; };
+		CF8CEE972AC4784400FCC645 /* FilmlerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CEE962AC4784400FCC645 /* FilmlerHucre.swift */; };
+		CF8CEE9B2AC47D7F00FCC645 /* DetaySayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8CEE9A2AC47D7F00FCC645 /* DetaySayfa.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CF7493952AC38BD500ED4B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF7493972AC38BD500ED4B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF74939D2AC38CE300ED4B45 /* Filmler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filmler.swift; sourceTree = "<group>"; };
+		CF8CEE962AC4784400FCC645 /* FilmlerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmlerHucre.swift; sourceTree = "<group>"; };
+		CF8CEE9A2AC47D7F00FCC645 /* DetaySayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetaySayfa.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				CF74938B2AC38BD000ED4B45 /* SceneDelegate.swift */,
 				CF74938D2AC38BD000ED4B45 /* Anasayfa.swift */,
 				CF74939D2AC38CE300ED4B45 /* Filmler.swift */,
+				CF8CEE962AC4784400FCC645 /* FilmlerHucre.swift */,
+				CF8CEE9A2AC47D7F00FCC645 /* DetaySayfa.swift */,
 				CF74938F2AC38BD000ED4B45 /* Main.storyboard */,
 				CF7493922AC38BD500ED4B45 /* Assets.xcassets */,
 				CF7493942AC38BD500ED4B45 /* LaunchScreen.storyboard */,
@@ -144,6 +150,8 @@
 				CF74938E2AC38BD000ED4B45 /* Anasayfa.swift in Sources */,
 				CF74938A2AC38BD000ED4B45 /* AppDelegate.swift in Sources */,
 				CF74938C2AC38BD000ED4B45 /* SceneDelegate.swift in Sources */,
+				CF8CEE972AC4784400FCC645 /* FilmlerHucre.swift in Sources */,
+				CF8CEE9B2AC47D7F00FCC645 /* DetaySayfa.swift in Sources */,
 				CF74939E2AC38CE300ED4B45 /* Filmler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
