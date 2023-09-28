@@ -11,10 +11,9 @@ import RxSwift
 class AnasayfaViewModel {
     
     var krepo = KisilerDaoRepository()
-    var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
+    var kisilerListesi = BehaviorSubject<[KisilerModel]>(value: [KisilerModel]())
 
     init(){
-        krepo.veritabaniKopyala()
         kisilerListesi = krepo.kisilerListesi
     }
     
@@ -22,8 +21,8 @@ class AnasayfaViewModel {
         krepo.ara(aramaKelimesi: aramaKelimesi)
     }
     
-    func sil(kisi_id:Int){
-        krepo.sil(kisi_id: kisi_id)
+    func sil(kisi:KisilerModel){
+        krepo.sil(kisi:kisi)
         //Sildiktan sonra güncelleme için bu yapılır.
         kisileriYukle()
     }

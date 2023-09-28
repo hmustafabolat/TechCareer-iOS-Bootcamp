@@ -2,17 +2,16 @@
 //  AnasayfaViewModel.swift
 //  KisilerUygulamasi
 //
-//  Created by Musti on 26.09.2023.
+//  Created by Kasım on 26.09.2023.
 //
 
 import Foundation
 import RxSwift
 
 class AnasayfaViewModel {
-    
     var krepo = KisilerDaoRepository()
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
-
+    
     init(){
         krepo.veritabaniKopyala()
         kisilerListesi = krepo.kisilerListesi
@@ -24,7 +23,6 @@ class AnasayfaViewModel {
     
     func sil(kisi_id:Int){
         krepo.sil(kisi_id: kisi_id)
-        //Sildiktan sonra güncelleme için bu yapılır.
         kisileriYukle()
     }
     

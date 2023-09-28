@@ -14,7 +14,6 @@ class AnasayfaViewModel {
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
 
     init(){
-        krepo.veritabaniKopyala()
         kisilerListesi = krepo.kisilerListesi
     }
     
