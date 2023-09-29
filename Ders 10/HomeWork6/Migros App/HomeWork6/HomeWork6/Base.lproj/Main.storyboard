@@ -19,7 +19,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ürün, yemek veya hizmet ara" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-SN-Bet">
                                 <rect key="frame" x="20" y="252" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="searchTextField:" destination="BYZ-38-t0r" eventType="editingChanged" id="ZmH-58-3Yu"/>
@@ -86,6 +86,7 @@
                     <connections>
                         <outlet property="footerImage" destination="TDC-7p-x1Q" id="wXQ-7c-DeZ"/>
                         <outlet property="kategoriCollectionView" destination="Pfd-P6-AWe" id="m4H-bX-S5n"/>
+                        <outlet property="searchTextField" destination="JbS-SN-Bet" id="Xjz-Wy-DvO"/>
                         <outlet property="titleImage" destination="po5-Pd-yh7" id="Pwu-5X-9Qr"/>
                     </connections>
                 </viewController>

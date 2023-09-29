@@ -15,13 +15,14 @@ class Anasayfa: UIViewController {
     
     @IBOutlet weak var kategoriCollectionView: UICollectionView!
     
+    @IBOutlet weak var searchTextField: UITextField!
+    
+    
     var kategoriListesi = [Kategoriler]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         
         let apperance = UINavigationBarAppearance()
         
@@ -65,9 +66,63 @@ class Anasayfa: UIViewController {
         
         kategoriCollectionView.collectionViewLayout = tasarim
         
+        let searchIcon = UIImageView(image: UIImage(named: "search"))
+        searchIcon.contentMode = .center
+        searchIcon.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+
+        let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 30))
+        leftView.addSubview(searchIcon)
+        searchIcon.center = leftView.center
+        
+        searchTextField.leftView = leftView
+        searchTextField.leftViewMode = .always
+
+        let micIcon = UIImageView(image: UIImage(named: "mic"))
+        micIcon.contentMode = .center
+        micIcon.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+
+        let barcodeIcon = UIImageView(image: UIImage(named: "barcode"))
+        barcodeIcon.contentMode = .center
+        barcodeIcon.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        
+        let rightView = UIStackView(arrangedSubviews: [micIcon, barcodeIcon])
+        rightView.axis = .horizontal
+        rightView.spacing = 5
+    
+        let spacerView1 = UIView()
+        spacerView1.widthAnchor.constraint(equalToConstant: 10).isActive = true // Set width of spacer view
+        rightView.addArrangedSubview(micIcon)
+        rightView.addArrangedSubview(spacerView1)
+
+        let spacerView2 = UIView()
+        spacerView2.widthAnchor.constraint(equalToConstant: 20).isActive = true // Set width of spacer view
+        rightView.addArrangedSubview(barcodeIcon)
+        rightView.addArrangedSubview(spacerView2)
+        
+        
+        let rightSpaces = UIView(frame: CGRect(x: 0, y: 0, width: 70, height: 30))
+        rightSpaces.addSubview(rightView)
+        rightView.center = rightSpaces.center
+
+        searchTextField.rightView = rightSpaces
+        searchTextField.rightViewMode = .always
+        
     }
+    
     @IBAction func searchTextField(_ sender: UITextField) {
         
+    }
+    
+    func performSearch(){
+        if let searchText = searchTextField.text{
+            print("Arama: \(searchText)")
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        performSearch()
+        return true
     }
 }
 
@@ -89,7 +144,5 @@ extension Anasayfa : UICollectionViewDelegate, UICollectionViewDataSource {
         
         return hucre
     }
-    
-    
 }
 
