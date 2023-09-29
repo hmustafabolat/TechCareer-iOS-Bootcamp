@@ -17,6 +17,7 @@ class Anasayfa: UIViewController {
     
     var kategoriListesi = [Kategoriler]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,14 +54,14 @@ class Anasayfa: UIViewController {
         kategoriCollectionView.delegate = self
         
         let tasarim = UICollectionViewFlowLayout()
-        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        tasarim.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
         tasarim.minimumLineSpacing = 20
         tasarim.minimumInteritemSpacing = 20
         
         let ekranGenislik = UIScreen.main.bounds.width
-        let itemGenislik = (ekranGenislik - 40) / 2
+        let itemGenislik = (ekranGenislik - 60) / 2
         
-        tasarim.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 0.6)
+        tasarim.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 0.7)
         
         kategoriCollectionView.collectionViewLayout = tasarim
         
