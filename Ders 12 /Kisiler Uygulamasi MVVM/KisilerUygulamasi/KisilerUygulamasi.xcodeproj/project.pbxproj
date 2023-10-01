@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF513EE92AC9E09500F7710B /* CRUDCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF513EE82AC9E09500F7710B /* CRUDCevap.swift */; };
+		CF513EEB2AC9E1B000F7710B /* KisilerCevap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF513EEA2AC9E1B000F7710B /* KisilerCevap.swift */; };
 		CF860D452AC354B8009DDE35 /* KisilerDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D442AC354B8009DDE35 /* KisilerDaoRepository.swift */; };
 		CF860D482AC354FD009DDE35 /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D472AC354FD009DDE35 /* AnasayfaViewModel.swift */; };
 		CF860D4A2AC35518009DDE35 /* KisiKayitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF860D492AC35518009DDE35 /* KisiKayitViewModel.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CF513EE82AC9E09500F7710B /* CRUDCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRUDCevap.swift; sourceTree = "<group>"; };
+		CF513EEA2AC9E1B000F7710B /* KisilerCevap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerCevap.swift; sourceTree = "<group>"; };
 		CF860D442AC354B8009DDE35 /* KisilerDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerDaoRepository.swift; sourceTree = "<group>"; };
 		CF860D472AC354FD009DDE35 /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
 		CF860D492AC35518009DDE35 /* KisiKayitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayitViewModel.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 			isa = PBXGroup;
 			children = (
 				CFD078482ABCA9500023742C /* Kisiler.swift */,
+				CF513EE82AC9E09500F7710B /* CRUDCevap.swift */,
+				CF513EEA2AC9E1B000F7710B /* KisilerCevap.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -234,6 +240,7 @@
 				CFD078462ABCA43A0023742C /* KisiDetay.swift in Sources */,
 				CFD078312ABCA2A90023742C /* Anasayfa.swift in Sources */,
 				CF860D452AC354B8009DDE35 /* KisilerDaoRepository.swift in Sources */,
+				CF513EEB2AC9E1B000F7710B /* KisilerCevap.swift in Sources */,
 				CF860D482AC354FD009DDE35 /* AnasayfaViewModel.swift in Sources */,
 				CF860D4C2AC35535009DDE35 /* KisiDetayViewModel.swift in Sources */,
 				CFD0782D2ABCA2A90023742C /* AppDelegate.swift in Sources */,
@@ -241,6 +248,7 @@
 				CFD078492ABCA9500023742C /* Kisiler.swift in Sources */,
 				CF860D4A2AC35518009DDE35 /* KisiKayitViewModel.swift in Sources */,
 				CF8DFA322AC5FCFC0076399D /* Model.xcdatamodeld in Sources */,
+				CF513EE92AC9E09500F7710B /* CRUDCevap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,7 +25,9 @@ class Anasayfa: UIViewController{
         
         _ = viewModel.kisilerListesi.subscribe(onNext: { liste in
             self.kisilerListesi = liste
-            self.kisilerTableView.reloadData()
+            DispatchQueue.main.async{
+                self.kisilerTableView.reloadData()
+            }
         })
     }
     

@@ -33,7 +33,14 @@ class KisilerDaoRepository {//Dao: Database Access Object
     }
     
     func kisileriYukle(){
+        var liste = [Kisiler]()
+        let k1 = Kisiler(kisi_id: "1", kisi_ad: "Ahmet", kisi_tel: "1111")
+        let k2 = Kisiler(kisi_id: "2", kisi_ad: "Zeynep", kisi_tel: "2222")
+        let k3 = Kisiler(kisi_id: "3", kisi_ad: "Beyaz", kisi_tel: "3333")
         
-        //kisilerListesi.onNext(liste)
+        liste.append(k1)
+        liste.append(k2)
+        liste.append(k3)
+        kisilerListesi.onNext(liste)
     }
 }

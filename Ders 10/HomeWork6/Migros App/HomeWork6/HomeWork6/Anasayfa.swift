@@ -66,6 +66,7 @@ class Anasayfa: UIViewController {
         
         kategoriCollectionView.collectionViewLayout = tasarim
         
+        //Search Bar ikonları için kullanılan kodlar.
         let searchIcon = UIImageView(image: UIImage(named: "search"))
         searchIcon.contentMode = .center
         searchIcon.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
@@ -87,10 +88,10 @@ class Anasayfa: UIViewController {
         
         let rightView = UIStackView(arrangedSubviews: [micIcon, barcodeIcon])
         rightView.axis = .horizontal
-        rightView.spacing = 5
+        rightView.spacing = 10
     
         let spacerView1 = UIView()
-        spacerView1.widthAnchor.constraint(equalToConstant: 10).isActive = true // Set width of spacer view
+        spacerView1.widthAnchor.constraint(equalToConstant: 20).isActive = true // Set width of spacer view
         rightView.addArrangedSubview(micIcon)
         rightView.addArrangedSubview(spacerView1)
 
