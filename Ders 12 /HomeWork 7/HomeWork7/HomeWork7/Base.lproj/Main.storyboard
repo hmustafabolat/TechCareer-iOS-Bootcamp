@@ -27,7 +27,7 @@
                                 <rect key="frame" x="0.0" y="194" width="393" height="624"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gorevlerHucre" id="nmz-Rf-UG8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gorevlerHucre" id="nmz-Rf-UG8" customClass="GorevlerHucre" customModule="HomeWork7" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nmz-Rf-UG8" id="CkI-Ks-iEw">
@@ -35,7 +35,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mLd-sN-fsY">
-                                                    <rect key="frame" x="16" y="-3.3333333333333321" width="59" height="50.333333333333329"/>
+                                                    <rect key="frame" x="16" y="7" width="59" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3b-9O-swH">
                                                             <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
@@ -43,23 +43,17 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaH-Z8-eAs">
-                                                            <rect key="frame" x="0.0" y="30" width="59" height="20.333333333333329"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="20.333333333333336" id="Ana-re-3N0"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="mLd-sN-fsY" firstAttribute="leading" secondItem="CkI-Ks-iEw" secondAttribute="leading" constant="16" id="9ko-w4-dWy"/>
+                                                <constraint firstItem="mLd-sN-fsY" firstAttribute="leading" secondItem="CkI-Ks-iEw" secondAttribute="leading" constant="16" id="QRd-9a-u47"/>
                                                 <constraint firstItem="mLd-sN-fsY" firstAttribute="centerY" secondItem="CkI-Ks-iEw" secondAttribute="centerY" id="aPF-ej-gHq"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelGorevAd" destination="e3b-9O-swH" id="rqs-ih-PB4"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -79,11 +73,13 @@
                     <navigationItem key="navigationItem" title="Anasayfa" customizationIdentifier="" id="kzi-CO-V17">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8om-c0-ZC3">
                             <connections>
-                                <segue destination="KEt-hw-siB" kind="show" identifier="toGorevEkle" id="unQ-Ak-B7d"/>
+                                <segue destination="KEt-hw-siB" kind="show" identifier="" id="unQ-Ak-B7d"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="gorevlerTableView" destination="7LZ-xU-u2j" id="Jdu-YP-kxf"/>
+                        <outlet property="searchBar" destination="kx3-XW-hLw" id="a2h-Qw-edb"/>
                         <segue destination="YmC-6R-8Zm" kind="show" identifier="toDetay" id="Z2g-zT-0Rs"/>
                     </connections>
                 </viewController>
@@ -98,10 +94,37 @@
                     <view key="view" contentMode="scaleToFill" id="yuj-7e-3fd">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Yeni Görev Ekle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3T7-49-DWS">
+                                <rect key="frame" x="15" y="128" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTl-92-iMe">
+                                <rect key="frame" x="153.33333333333334" y="202" width="86.333333333333343" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Kaydet">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonKaydet:" destination="KEt-hw-siB" eventType="touchUpInside" id="Dsz-Jw-r3q"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FSQ-Fi-Wu4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FSQ-Fi-Wu4" firstAttribute="trailing" secondItem="3T7-49-DWS" secondAttribute="trailing" constant="15" id="8B9-G0-jIh"/>
+                            <constraint firstItem="3T7-49-DWS" firstAttribute="leading" secondItem="FSQ-Fi-Wu4" secondAttribute="leading" constant="15" id="BYH-P0-80T"/>
+                            <constraint firstItem="3T7-49-DWS" firstAttribute="top" secondItem="FSQ-Fi-Wu4" secondAttribute="top" constant="25" id="cNR-QJ-PM9"/>
+                            <constraint firstItem="TTl-92-iMe" firstAttribute="top" secondItem="3T7-49-DWS" secondAttribute="bottom" constant="40" id="d34-3O-SJw"/>
+                            <constraint firstItem="TTl-92-iMe" firstAttribute="centerX" secondItem="yuj-7e-3fd" secondAttribute="centerX" id="dGr-Lf-EnL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Görev Ekle" id="7aa-C5-Dso"/>
+                    <connections>
+                        <outlet property="tfGorevAd" destination="3T7-49-DWS" id="ej1-3E-I1H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlX-Xy-xon" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,10 +137,37 @@
                     <view key="view" contentMode="scaleToFill" id="l7A-5N-JU7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Görev Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWS-87-Esc">
+                                <rect key="frame" x="15" y="138" width="363" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuI-mR-nJm">
+                                <rect key="frame" x="145" y="212" width="103" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Güncelle">
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGuncelle:" destination="YmC-6R-8Zm" eventType="touchUpInside" id="V1o-Jp-AuC"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bP7-Vd-ubF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nuI-mR-nJm" firstAttribute="top" secondItem="dWS-87-Esc" secondAttribute="bottom" constant="40" id="Enn-n0-oLe"/>
+                            <constraint firstItem="bP7-Vd-ubF" firstAttribute="trailing" secondItem="dWS-87-Esc" secondAttribute="trailing" constant="15" id="KyU-yC-Ekc"/>
+                            <constraint firstItem="nuI-mR-nJm" firstAttribute="centerX" secondItem="l7A-5N-JU7" secondAttribute="centerX" id="Qio-ps-xa1"/>
+                            <constraint firstItem="dWS-87-Esc" firstAttribute="leading" secondItem="bP7-Vd-ubF" secondAttribute="leading" constant="15" id="YbW-Ap-iVd"/>
+                            <constraint firstItem="dWS-87-Esc" firstAttribute="top" secondItem="bP7-Vd-ubF" secondAttribute="top" constant="35" id="o9q-QE-BCl"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Görev Detay" id="LA3-Hf-HAP"/>
+                    <connections>
+                        <outlet property="tfGorevAd" destination="dWS-87-Esc" id="UkE-ON-DnN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zFk-36-J7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
