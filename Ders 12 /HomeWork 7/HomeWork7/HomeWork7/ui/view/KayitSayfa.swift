@@ -10,6 +10,8 @@ import UIKit
 class KayitSayfa: UIViewController {
     
     @IBOutlet weak var tfGorevAd: UITextField!
+    
+    var viewModel = KayitsayfaViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,7 @@ class KayitSayfa: UIViewController {
     }
     
     func kaydet(gorev_ad:String){
-        print("Kişi Kaydet: \(gorev_ad)")
+        viewModel.kaydet(gorev_ad: gorev_ad)
     }
     
 }

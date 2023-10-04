@@ -12,6 +12,7 @@ class DetaySayfa: UIViewController {
     @IBOutlet weak var tfGorevAd: UITextField!
     
     var gorev:Gorevler?
+    var viewModel = DetaysayfaViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,6 @@ class DetaySayfa: UIViewController {
     }
     
     func guncelle(gorev_id:Int, gorev_ad:String){
-        print("Kişi Güncelle: \(gorev_id) - \(gorev_ad)")
+        viewModel.guncelle(gorev_id: gorev_id, gorev_ad: gorev_ad)
     }
 }

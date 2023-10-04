@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+
 
 class Anasayfa: UIViewController {
     
@@ -13,6 +15,7 @@ class Anasayfa: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var gorevlerListesi = [Gorevler]()
+    var viewModel = AnasayfaViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,21 +23,14 @@ class Anasayfa: UIViewController {
         gorevlerTableView.delegate = self
         gorevlerTableView.dataSource = self
         
-        let g1 = Gorevler(gorev_id: 1, gorev_ad: "Görev 1")
-        let g2 = Gorevler(gorev_id: 2, gorev_ad: "Görev 2")
-        let g3 = Gorevler(gorev_id: 3, gorev_ad: "Görev 3")
-        let g4 = Gorevler(gorev_id: 4, gorev_ad: "Görev 4")
-        let g5 = Gorevler(gorev_id: 5, gorev_ad: "Görev 5")
-        
-        gorevlerListesi.append(g1)
-        gorevlerListesi.append(g2)
-        gorevlerListesi.append(g3)
-        gorevlerListesi.append(g4)
-        gorevlerListesi.append(g5)
+        _ = viewModel.gorevlerListesi.subscribe(onNext: {liste in
+            self.gorevlerListesi = liste
+            self.gorevlerTableView.reloadData()
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        print("Anasayfaya Dönüldü")
+        viewModel.gorevleriYukle()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -51,7 +47,7 @@ class Anasayfa: UIViewController {
 
 extension Anasayfa : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Kişi Ara: \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
     }
 }
 
@@ -85,7 +81,7 @@ extension Anasayfa : UITableViewDelegate, UITableViewDataSource{
             alert.addAction(iptalAction)
             let evetAction = UIAlertAction(title: "Evet", style: .destructive){
                 action in
-                print("Kişi sil: \(gorev.gorev_ad!)")
+                self.viewModel.sil(gorev_id: gorev.gorev_id!)
             }
             alert.addAction(evetAction)
             
