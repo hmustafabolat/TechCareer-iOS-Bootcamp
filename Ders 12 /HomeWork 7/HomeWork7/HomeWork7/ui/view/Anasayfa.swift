@@ -30,7 +30,9 @@ class Anasayfa: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        print("Deneme 1")
         viewModel.gorevleriYukle()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

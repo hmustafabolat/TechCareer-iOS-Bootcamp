@@ -32,6 +32,7 @@ class GorevlerDaoRepository { //Dao: Database Access Object
     func guncelle(gorev_id:Int, gorev_ad:String){
         db?.open()
         do{
+            print("Görev id : \(gorev_id)")
             try db!.executeUpdate("UPDATE gorevler SET gorev_ad=? WHERE gorev_id=?", values: [gorev_ad, gorev_id])
         }catch{
             print(error.localizedDescription)
@@ -40,11 +41,35 @@ class GorevlerDaoRepository { //Dao: Database Access Object
     }
     
     func ara(aramaKelimesi:String){
-        print("Görev ara: \(aramaKelimesi)")
+        db?.open()
+        var liste = [Gorevler]()
+        do{
+            let rs = try db!.executeQuery("SELECT * FROM gorevler WHERE gorev_ad like '%\(aramaKelimesi)%'", values: nil)
+            
+            while rs.next(){
+                let gorev_id = Int(rs.string(forColumn: "gorev_id"))!
+                let gorev_ad = rs.string(forColumn: "gorev_ad")!
+                
+                let gorev = Gorevler(gorev_id: gorev_id, gorev_ad: gorev_ad)
+                liste.append(gorev)
+            }
+            gorevlerListesi.onNext(liste)
+            
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
     func sil(gorev_id:Int){
-        print("Görev sil: \(gorev_id)")
+        db?.open()
+        do{
+           
+            try db!.executeUpdate("DELETE FROM gorevler WHERE gorev_id=?", values: [gorev_id])
+        }catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
     }
     
     func gorevleriYukle(){
