@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5eJ-0W-0di">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Start Page-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-Aj-r2V">
+                                <rect key="frame" x="-400.5" y="-851.5" width="1215" height="1215"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kapınıza kadar hızlı teslimat         " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93w-Ha-912">
+                                <rect key="frame" x="62" y="394.5" width="290" height="72"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <color key="textColor" name="text1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGJ-Eh-eOh">
+                                <rect key="frame" x="32" y="501.5" width="350" height="105.5"/>
+                                <string key="text">Restoranlar ve kafeler için eve teslimat ve online rezervasyon sistemi
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" name="text1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BJ-Ij-rz3">
+                                <rect key="frame" x="38" y="766" width="338" height="47"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Hadi keşfedelim" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                    <color key="baseForegroundColor" name="mainColor"/>
+                                    <color key="baseBackgroundColor" name="text1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="yHX-JA-qaa" kind="show" id="FpS-80-kC7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <constraints>
+                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="12j-RB-N3X"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="centerX" secondItem="a4g-Aj-r2V" secondAttribute="centerX" id="Eyb-A6-IcZ"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="H8v-rw-jK8"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="centerX" secondItem="9BJ-Ij-rz3" secondAttribute="centerX" id="OXf-k4-dj9"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="top" secondItem="a4g-Aj-r2V" secondAttribute="bottom" constant="31" id="Yve-BR-RTS"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cCx-4i-ed5"/>
+                            <constraint firstItem="9BJ-Ij-rz3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="eWt-KD-k7G"/>
+                            <constraint firstAttribute="bottom" secondItem="93w-Ha-912" secondAttribute="bottom" constant="429.33333333333331" id="rG1-nh-PUe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGJ-Eh-eOh" secondAttribute="trailing" constant="32" id="tDJ-Yx-8Le"/>
+                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="top" secondItem="93w-Ha-912" secondAttribute="bottom" constant="35" id="uyu-Le-Uto"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="9BJ-Ij-rz3" secondAttribute="bottom" constant="49" id="xeK-GH-xDG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AZQ-KX-ecD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="4.9295774647887329"/>
+        </scene>
+        <!--Home Page-->
+        <scene sceneID="nWD-tA-xTd">
+            <objects>
+                <viewController id="yHX-JA-qaa" customClass="HomePage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3GT-Jh-vSF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ciT-j9-C1Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1K9-sV-i8E">
+                        <barButtonItem key="rightBarButtonItem" title="Profile" id="h54-tX-KVi">
+                            <color key="tintColor" name="mainColor"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N11-p6-QkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2005" y="-275"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eSt-Rk-qdg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5eJ-0W-0di" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nPC-vp-RU5">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qlk-g5-kaY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Moc-Xo-Xyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="salad" width="1215" height="1215"/>
+        <namedColor name="mainColor">
+            <color red="0.32471972700000001" green="0.67482566830000001" blue="0.23048347229999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="text1">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
