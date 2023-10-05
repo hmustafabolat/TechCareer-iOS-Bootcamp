@@ -22,6 +22,7 @@ class KayitSayfa: UIViewController {
         if let ad = tfGorevAd.text{
             kaydet(gorev_ad: ad)
         }
+        
     }
     
     func kaydet(gorev_ad:String){

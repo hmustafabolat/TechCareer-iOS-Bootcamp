@@ -24,8 +24,10 @@ class DetaySayfa: UIViewController {
     
     @IBAction func buttonGuncelle(_ sender: Any) {
         if let ad = tfGorevAd.text, let g = gorev {
-            viewModel.guncelle(gorev_id: g.gorev_id!, gorev_ad: ad)
+            viewModel.guncelle(gorev_id: g.gorev_id!, gorev_ad: ad) 
         }
+        
+       
     }
     
     func guncelle(gorev_id:Int, gorev_ad:String){
