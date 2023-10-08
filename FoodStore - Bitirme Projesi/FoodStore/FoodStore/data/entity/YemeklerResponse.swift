@@ -7,3 +7,7 @@
 
 import Foundation
 
+class YemeklerResponse : Codable {
+    var success:Int?
+    var message:String?
+}

@@ -20,3 +20,4 @@ class Yemekler : Codable {
         self.yemek_fiyat = yemek_fiyat
     }
 }
+

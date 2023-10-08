@@ -109,7 +109,6 @@
 		CFD952C32AD037CA00418000 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				CFD952E02AD0593800418000 /* model */,
 				CFD952D62AD0576000418000 /* repo */,
 				CFD952D72AD0576400418000 /* entity */,
 			);
@@ -163,20 +162,13 @@
 		CFD952D72AD0576400418000 /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				CFD952DC2AD0590400418000 /* SepettekiYemekler.swift */,
+				CFD952DE2AD0591200418000 /* Yemekler.swift */,
 				CFD952E12AD0596C00418000 /* YemeklerResponse.swift */,
 				CFD952E32AD0597800418000 /* CRUDResponse.swift */,
 				CFD952E52AD0598600418000 /* SepettekiYemeklerResponse.swift */,
 			);
 			path = entity;
-			sourceTree = "<group>";
-		};
-		CFD952E02AD0593800418000 /* model */ = {
-			isa = PBXGroup;
-			children = (
-				CFD952DC2AD0590400418000 /* SepettekiYemekler.swift */,
-				CFD952DE2AD0591200418000 /* Yemekler.swift */,
-			);
-			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
