@@ -65,6 +65,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CF1055892AD4666000B8FB21 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CFD952DE2AD0591200418000 /* Yemekler.swift */,
+				CFD952DC2AD0590400418000 /* SepettekiYemekler.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		CF5DD9B12ACEE5A100DEB22E = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +118,7 @@
 		CFD952C32AD037CA00418000 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				CF1055892AD4666000B8FB21 /* model */,
 				CFD952D62AD0576000418000 /* repo */,
 				CFD952D72AD0576400418000 /* entity */,
 			);
@@ -162,8 +172,6 @@
 		CFD952D72AD0576400418000 /* entity */ = {
 			isa = PBXGroup;
 			children = (
-				CFD952DC2AD0590400418000 /* SepettekiYemekler.swift */,
-				CFD952DE2AD0591200418000 /* Yemekler.swift */,
 				CFD952E12AD0596C00418000 /* YemeklerResponse.swift */,
 				CFD952E32AD0597800418000 /* CRUDResponse.swift */,
 				CFD952E52AD0598600418000 /* SepettekiYemeklerResponse.swift */,
