@@ -11,7 +11,7 @@ import Alamofire
 
 class KisilerDaoRepository {//Dao : Database Access Object
     var kisilerListesi = BehaviorSubject<[Kisiler]>(value: [Kisiler]())
-    //http://kasimadalan.pe.hu/kisiler/tum_kisiler.php
+    //http://kasimadalan.pe.hu/kisiler/tum_kisiler.phpx
     
     func kaydet(kisi_ad:String,kisi_tel:String){
         let params:Parameters = ["kisi_ad":kisi_ad,"kisi_tel":kisi_tel]

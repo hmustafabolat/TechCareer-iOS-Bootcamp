@@ -15,10 +15,11 @@
 		CF5DD9CA2ACEE5A300DEB22E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5DD9C82ACEE5A300DEB22E /* LaunchScreen.storyboard */; };
 		CF5DD9D52ACEEF7600DEB22E /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DD9D42ACEEF7600DEB22E /* StartPage.swift */; };
 		CF5DD9D72ACEEFC100DEB22E /* CartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DD9D62ACEEFC100DEB22E /* CartPage.swift */; };
+		CF835B632AD4ABDA00DCBDDA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF835B622AD4ABDA00DCBDDA /* DetailViewModel.swift */; };
+		CF835B672AD4AC0B00DCBDDA /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF835B662AD4AC0B00DCBDDA /* DetailPage.swift */; };
 		CFD952C72AD0381000418000 /* homeCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952C62AD0380F00418000 /* homeCollectionVC.swift */; };
 		CFD952CA2AD0531800418000 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFD952C92AD0531800418000 /* RxSwift */; };
 		CFD952CD2AD0533800418000 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CFD952CC2AD0533800418000 /* Alamofire */; };
-		CFD952D12AD056E600418000 /* StartPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952D02AD056E600418000 /* StartPageViewModel.swift */; };
 		CFD952D32AD056F400418000 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952D22AD056F400418000 /* HomePageViewModel.swift */; };
 		CFD952D52AD0570900418000 /* CartPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952D42AD0570900418000 /* CartPageViewModel.swift */; };
 		CFD952D92AD057CA00418000 /* FoodStoreDaoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952D82AD057CA00418000 /* FoodStoreDaoRepository.swift */; };
@@ -40,8 +41,9 @@
 		CF5DD9CB2ACEE5A300DEB22E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF5DD9D42ACEEF7600DEB22E /* StartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		CF5DD9D62ACEEFC100DEB22E /* CartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPage.swift; sourceTree = "<group>"; };
+		CF835B622AD4ABDA00DCBDDA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		CF835B662AD4AC0B00DCBDDA /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		CFD952C62AD0380F00418000 /* homeCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionVC.swift; sourceTree = "<group>"; };
-		CFD952D02AD056E600418000 /* StartPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewModel.swift; sourceTree = "<group>"; };
 		CFD952D22AD056F400418000 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		CFD952D42AD0570900418000 /* CartPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageViewModel.swift; sourceTree = "<group>"; };
 		CFD952D82AD057CA00418000 /* FoodStoreDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreDaoRepository.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				CF5DD9D42ACEEF7600DEB22E /* StartPage.swift */,
 				CF5DD9C12ACEE5A100DEB22E /* HomePage.swift */,
 				CF5DD9D62ACEEFC100DEB22E /* CartPage.swift */,
+				CF835B662AD4AC0B00DCBDDA /* DetailPage.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -154,9 +157,9 @@
 		CFD952CF2AD056AD00418000 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				CFD952D02AD056E600418000 /* StartPageViewModel.swift */,
 				CFD952D22AD056F400418000 /* HomePageViewModel.swift */,
 				CFD952D42AD0570900418000 /* CartPageViewModel.swift */,
+				CF835B622AD4ABDA00DCBDDA /* DetailViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -260,7 +263,6 @@
 			files = (
 				CFD952D92AD057CA00418000 /* FoodStoreDaoRepository.swift in Sources */,
 				CFD952DD2AD0590400418000 /* SepettekiYemekler.swift in Sources */,
-				CFD952D12AD056E600418000 /* StartPageViewModel.swift in Sources */,
 				CF5DD9C22ACEE5A100DEB22E /* HomePage.swift in Sources */,
 				CF5DD9D52ACEEF7600DEB22E /* StartPage.swift in Sources */,
 				CF5DD9D72ACEEFC100DEB22E /* CartPage.swift in Sources */,
@@ -270,8 +272,10 @@
 				CFD952D52AD0570900418000 /* CartPageViewModel.swift in Sources */,
 				CFD952E22AD0596C00418000 /* YemeklerResponse.swift in Sources */,
 				CF5DD9C02ACEE5A100DEB22E /* SceneDelegate.swift in Sources */,
+				CF835B672AD4AC0B00DCBDDA /* DetailPage.swift in Sources */,
 				CFD952C72AD0381000418000 /* homeCollectionVC.swift in Sources */,
 				CFD952DF2AD0591200418000 /* Yemekler.swift in Sources */,
+				CF835B632AD4ABDA00DCBDDA /* DetailViewModel.swift in Sources */,
 				CFD952E62AD0598600418000 /* SepettekiYemeklerResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

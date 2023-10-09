@@ -173,6 +173,7 @@
                                             <outlet property="priceLabel" destination="Tp9-WA-6Er" id="vHe-RZ-E2r"/>
                                             <outlet property="timeLabel" destination="aaC-FJ-7eU" id="vAN-oe-oyA"/>
                                             <outlet property="titleLabel" destination="HWJ-Jl-dbf" id="ED9-2J-erh"/>
+                                            <segue destination="UDk-Lv-H3n" kind="show" identifier="toDetail" id="HIc-7q-Fsv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -223,6 +224,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Moc-Xo-Xyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="135.1145038167939" y="4.9295774647887329"/>
+        </scene>
+        <!--Detail Page-->
+        <scene sceneID="bkA-7C-UFq">
+            <objects>
+                <viewController id="UDk-Lv-H3n" customClass="DetailPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mZC-EA-Vwo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bA8-e1-cag"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="O7N-rL-9nb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGc-FY-egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2886" y="-275"/>
         </scene>
     </scenes>
     <resources>

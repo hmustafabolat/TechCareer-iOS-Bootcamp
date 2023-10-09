@@ -11,6 +11,8 @@ import Alamofire
 
 class FoodStoreDaoRepository {
     
+    var yemeklerListesi = BehaviorSubject<[Yemekler]>(value: [Yemekler]())
+    
     
     func yemekleriListele(){
         
@@ -24,6 +26,20 @@ class FoodStoreDaoRepository {
         
     }
     
+    func sepeteYemekEkle(){
+        
+    }
     
+    func sepettekiYemekleriGoruntule(){
+        
+    }
+    
+    func sepettenYemekSil(){
+        
+    }
+    
+    func yemekAra(){
+        
+    }
     
 }
