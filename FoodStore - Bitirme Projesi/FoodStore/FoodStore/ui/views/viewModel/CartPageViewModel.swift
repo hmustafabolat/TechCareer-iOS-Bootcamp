@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import RxSwift
+
+class CartPageViewModel{
+    var frepo = FoodStoreDaoRepository()
+    
+}

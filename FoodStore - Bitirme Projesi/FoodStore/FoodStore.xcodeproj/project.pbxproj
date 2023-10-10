@@ -17,7 +17,7 @@
 		CF5DD9D72ACEEFC100DEB22E /* CartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5DD9D62ACEEFC100DEB22E /* CartPage.swift */; };
 		CF835B632AD4ABDA00DCBDDA /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF835B622AD4ABDA00DCBDDA /* DetailViewModel.swift */; };
 		CF835B672AD4AC0B00DCBDDA /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF835B662AD4AC0B00DCBDDA /* DetailPage.swift */; };
-		CFD952C72AD0381000418000 /* homeCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952C62AD0380F00418000 /* homeCollectionVC.swift */; };
+		CFD952C72AD0381000418000 /* YemeklerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952C62AD0380F00418000 /* YemeklerHucre.swift */; };
 		CFD952CA2AD0531800418000 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CFD952C92AD0531800418000 /* RxSwift */; };
 		CFD952CD2AD0533800418000 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CFD952CC2AD0533800418000 /* Alamofire */; };
 		CFD952D32AD056F400418000 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD952D22AD056F400418000 /* HomePageViewModel.swift */; };
@@ -43,7 +43,7 @@
 		CF5DD9D62ACEEFC100DEB22E /* CartPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPage.swift; sourceTree = "<group>"; };
 		CF835B622AD4ABDA00DCBDDA /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		CF835B662AD4AC0B00DCBDDA /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
-		CFD952C62AD0380F00418000 /* homeCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeCollectionVC.swift; sourceTree = "<group>"; };
+		CFD952C62AD0380F00418000 /* YemeklerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YemeklerHucre.swift; sourceTree = "<group>"; };
 		CFD952D22AD056F400418000 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		CFD952D42AD0570900418000 /* CartPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageViewModel.swift; sourceTree = "<group>"; };
 		CFD952D82AD057CA00418000 /* FoodStoreDaoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodStoreDaoRepository.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		CFD952C52AD037F100418000 /* cells */ = {
 			isa = PBXGroup;
 			children = (
-				CFD952C62AD0380F00418000 /* homeCollectionVC.swift */,
+				CFD952C62AD0380F00418000 /* YemeklerHucre.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -273,7 +273,7 @@
 				CFD952E22AD0596C00418000 /* YemeklerResponse.swift in Sources */,
 				CF5DD9C02ACEE5A100DEB22E /* SceneDelegate.swift in Sources */,
 				CF835B672AD4AC0B00DCBDDA /* DetailPage.swift in Sources */,
-				CFD952C72AD0381000418000 /* homeCollectionVC.swift in Sources */,
+				CFD952C72AD0381000418000 /* YemeklerHucre.swift in Sources */,
 				CFD952DF2AD0591200418000 /* Yemekler.swift in Sources */,
 				CF835B632AD4ABDA00DCBDDA /* DetailViewModel.swift in Sources */,
 				CFD952E62AD0598600418000 /* SepettekiYemeklerResponse.swift in Sources */,

@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import RxSwift
+
+class DetailViewModel{
+    var frepo = FoodStoreDaoRepository()
+    
+    func sepeteYemekEkle(){
+        
+    }
+    
+    func detaydaAdetSec(){
+        
+    }
+    
+}

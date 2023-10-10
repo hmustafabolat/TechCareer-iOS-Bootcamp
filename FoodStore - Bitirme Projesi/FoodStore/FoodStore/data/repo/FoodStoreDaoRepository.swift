@@ -12,7 +12,7 @@ import Alamofire
 class FoodStoreDaoRepository {
     
     var yemeklerListesi = BehaviorSubject<[Yemekler]>(value: [Yemekler]())
-    
+    //http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php
     
     func yemekleriListele(){
         
