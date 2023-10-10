@@ -318,7 +318,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2V-V7-Q96">
                                                 <rect key="frame" x="0.0" y="109" width="414" height="34.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                                <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
                                                     <color key="baseBackgroundColor" name="mainColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -351,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGc-FY-egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2825" y="-281"/>
+            <point key="canvasLocation" x="3138" y="-321"/>
         </scene>
         <!--Cart Page-->
         <scene sceneID="XSK-cb-zhG">
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-uh-v09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2825" y="-1035"/>
+            <point key="canvasLocation" x="4532" y="-281"/>
         </scene>
     </scenes>
     <resources>
