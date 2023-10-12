@@ -69,7 +69,15 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
         
         let yemek = yemeklerListesi[indexPath.row]
         
-        hucre.imageCell.image = UIImage(named: yemek.yemek_resim_adi!)
+        if let yemekResimAdi = yemek.yemek_resim_adi {
+            yemeklerViewModel.yemekResminiYukle(yemekAdi: yemekResimAdi) { image in
+                DispatchQueue.main.async {
+                    hucre.imageCell.image = image
+                }
+            }
+        }
+        
+        //hucre.imageCell.image = UIImage(named: yemek.yemek_resim_adi!)
         hucre.titleLabel.text = "\(yemek.yemek_adi!)"
         hucre.priceLabel.text = "\(yemek.yemek_fiyat!) ₺"
         

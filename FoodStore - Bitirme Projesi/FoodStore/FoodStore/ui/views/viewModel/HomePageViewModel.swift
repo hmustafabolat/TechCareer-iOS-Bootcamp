@@ -7,6 +7,7 @@
 
 import Foundation
 import RxSwift
+import UIKit
 
 class HomePageViewModel {
     var frepo = FoodStoreDaoRepository()
@@ -19,6 +20,13 @@ class HomePageViewModel {
     func yemekleriListele(){
         frepo.yemekleriListele()
     }
+    
+    func yemekResminiYukle(yemekAdi: String, completion: @escaping (UIImage?) -> Void) {
+            frepo.yemekResminiGetir(yemekAdi: yemekAdi) { image in
+                completion(image)
+            }
+        }
+    
     
     func yemekAra(aramaKelimesi: String){
         frepo.yemekAra(aramaKelimesi: aramaKelimesi)

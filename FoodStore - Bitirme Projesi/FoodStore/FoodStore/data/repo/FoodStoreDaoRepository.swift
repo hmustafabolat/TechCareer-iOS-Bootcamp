@@ -8,6 +8,8 @@
 import Foundation
 import RxSwift
 import Alamofire
+import UIKit
+
 
 class FoodStoreDaoRepository {
     
@@ -23,8 +25,6 @@ class FoodStoreDaoRepository {
                     let dataResponse = try JSONDecoder().decode(YemeklerResponse.self, from: data)
                     if let list = dataResponse.yemekler {
                         self.yemeklerListesi.onNext(list)
-                        
-                        print("\(list.count)***")
                 }
             }catch{
                 print(error.localizedDescription)
@@ -32,6 +32,27 @@ class FoodStoreDaoRepository {
             }
         }
     }
+    
+    func yemekResminiGetir(yemekAdi: String, completion: @escaping (UIImage?) -> Void) {
+            let baseUrl = "http://kasimadalan.pe.hu/yemekler/resimler/"
+            let imageUrlString = baseUrl + yemekAdi
+            
+            guard let imageUrl = URL(string: imageUrlString) else {
+                print("Geçersiz resim URL'si")
+                completion(nil)
+                return
+            }
+            
+            AF.request(imageUrl).responseData { response in
+                if let data = response.data, let image = UIImage(data: data) {
+                    completion(image)
+                } else {
+                    print("Resim indirme hatası: \(response.error?.localizedDescription ?? "Bilinmeyen hata")")
+                    completion(nil)
+                }
+            }
+        }
+    
     
     
     func yemekDetaylarıGoster(){
@@ -57,5 +78,6 @@ class FoodStoreDaoRepository {
     func yemekAra(aramaKelimesi:String){
         
     }
+    
     
 }
