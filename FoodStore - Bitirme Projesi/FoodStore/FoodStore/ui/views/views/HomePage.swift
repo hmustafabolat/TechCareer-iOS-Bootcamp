@@ -11,10 +11,16 @@ class HomePage: UIViewController {
     
     @IBOutlet weak var yemeklerCollectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var yemeklerListesi = [Yemekler]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.backgroundImage = UIImage() // Kenarları kaldırır
+        searchBar.layer.borderWidth = 1 // Opsiyonel: Çerçeve kalınlığını ayarlayabilirsiniz
+        searchBar.layer.borderColor = UIColor.clear.cgColor // Opsiyonel: Çerçeve rengini ayarlayabilirsiniz
         
         let y1 = Yemekler(yemek_id: "1", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
         let y2 = Yemekler(yemek_id: "2", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
@@ -46,7 +52,7 @@ class HomePage: UIViewController {
         let ekranGenislik = UIScreen.main.bounds.width
         let itemGenislik = (ekranGenislik - 30) / 2
         
-        tasarim.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 1.6)
+        tasarim.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 1.5)
         
         yemeklerCollectionView.collectionViewLayout = tasarim
         
