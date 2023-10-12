@@ -8,6 +8,6 @@
 import Foundation
 
 class YemeklerResponse : Codable {
-    var success:Int?
-    var message:String?
+    var success : Int?
+    var yemekler : [Yemekler]?
 }

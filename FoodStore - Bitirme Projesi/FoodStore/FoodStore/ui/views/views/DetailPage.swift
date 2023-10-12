@@ -41,4 +41,8 @@ class DetailPage: UIViewController {
         
     }
     
+    @IBAction func toCartButton(_ sender: Any) {
+        performSegue(withIdentifier: "toCartPage", sender: nil)
+    }
+    
 }

@@ -17,11 +17,11 @@ class HomePageViewModel {
     }
     
     func yemekleriListele(){
-        
+        frepo.yemekleriListele()
     }
     
-    func yemekAra(){
-        
+    func yemekAra(aramaKelimesi: String){
+        frepo.yemekAra(aramaKelimesi: aramaKelimesi)
     }
     
     func yemekDetaylarıGoster(){

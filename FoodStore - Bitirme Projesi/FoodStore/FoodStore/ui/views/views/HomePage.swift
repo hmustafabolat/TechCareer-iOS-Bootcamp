@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomePage: UIViewController {
     
@@ -14,6 +15,7 @@ class HomePage: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var yemeklerListesi = [Yemekler]()
+    var yemeklerViewModel = HomePageViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,22 +23,12 @@ class HomePage: UIViewController {
         searchBar.backgroundImage = UIImage() // Kenarları kaldırır
         searchBar.layer.borderWidth = 1 // Opsiyonel: Çerçeve kalınlığını ayarlayabilirsiniz
         searchBar.layer.borderColor = UIColor.clear.cgColor // Opsiyonel: Çerçeve rengini ayarlayabilirsiniz
-        
-        let y1 = Yemekler(yemek_id: "1", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        let y2 = Yemekler(yemek_id: "2", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        let y3 = Yemekler(yemek_id: "3", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        let y4 = Yemekler(yemek_id: "4", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        let y5 = Yemekler(yemek_id: "5", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        let y6 = Yemekler(yemek_id: "6", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        let y7 = Yemekler(yemek_id: "7", yemek_adi: "Salata", yemek_resim_adi: "salad", yemek_fiyat: "55")
-        
-        yemeklerListesi.append(y1)
-        yemeklerListesi.append(y2)
-        yemeklerListesi.append(y3)
-        yemeklerListesi.append(y4)
-        yemeklerListesi.append(y5)
-        yemeklerListesi.append(y6)
-        yemeklerListesi.append(y7)
+        //
+        _ = yemeklerViewModel.yemekListesi.subscribe(onNext: { list in
+            self.yemeklerListesi = list
+            self.yemeklerCollectionView.reloadData()
+            print(list.count)
+        })
         
         yemeklerCollectionView.delegate = self
         yemeklerCollectionView.dataSource = self
@@ -57,6 +49,10 @@ class HomePage: UIViewController {
         yemeklerCollectionView.collectionViewLayout = tasarim
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        yemeklerViewModel.yemekleriListele()
+    }
+    
     @IBAction func cartButton(_ sender: Any) {
         performSegue(withIdentifier: "toCart", sender: nil)
     }

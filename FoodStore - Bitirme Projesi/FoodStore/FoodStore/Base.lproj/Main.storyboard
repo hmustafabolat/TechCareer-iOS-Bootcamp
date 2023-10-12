@@ -134,7 +134,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8w-ot-oD3">
-                                                    <rect key="frame" x="67.5" y="178.5" width="34.5" height="34.5"/>
+                                                    <rect key="frame" x="10" y="179" width="149" height="34.5"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" title="+">
                                                         <color key="baseBackgroundColor" name="mainColor"/>
@@ -145,13 +145,14 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="q8w-ot-oD3" firstAttribute="centerX" secondItem="iLq-Tf-Ib1" secondAttribute="centerX" id="04b-qr-E4D"/>
+                                                <constraint firstAttribute="trailing" secondItem="q8w-ot-oD3" secondAttribute="trailing" constant="10" id="29Y-pg-NtT"/>
                                                 <constraint firstItem="dhA-V3-g1m" firstAttribute="top" secondItem="HWJ-Jl-dbf" secondAttribute="bottom" constant="15" id="EDB-B6-m3T"/>
                                                 <constraint firstItem="7X3-gn-yhl" firstAttribute="top" secondItem="iLq-Tf-Ib1" secondAttribute="top" constant="10" id="F4E-Rn-kfP"/>
                                                 <constraint firstItem="HWJ-Jl-dbf" firstAttribute="centerX" secondItem="iLq-Tf-Ib1" secondAttribute="centerX" id="Hfv-Zp-jRk"/>
+                                                <constraint firstItem="q8w-ot-oD3" firstAttribute="top" secondItem="dhA-V3-g1m" secondAttribute="bottom" constant="30" id="HnS-Dp-fey"/>
+                                                <constraint firstItem="q8w-ot-oD3" firstAttribute="leading" secondItem="iLq-Tf-Ib1" secondAttribute="leading" constant="10" id="QEw-lC-Hu4"/>
                                                 <constraint firstItem="7X3-gn-yhl" firstAttribute="centerX" secondItem="iLq-Tf-Ib1" secondAttribute="centerX" id="ZNI-l3-DxS"/>
                                                 <constraint firstItem="HWJ-Jl-dbf" firstAttribute="top" secondItem="7X3-gn-yhl" secondAttribute="bottom" constant="15" id="niH-lP-v5e"/>
-                                                <constraint firstAttribute="bottom" secondItem="q8w-ot-oD3" secondAttribute="bottom" constant="10" id="qFB-PR-mHi"/>
                                                 <constraint firstItem="dhA-V3-g1m" firstAttribute="centerX" secondItem="iLq-Tf-Ib1" secondAttribute="centerX" id="u8S-Oa-bz2"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -197,7 +198,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N11-p6-QkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017" y="-281"/>
+            <point key="canvasLocation" x="2015.9420289855075" y="-281.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eSt-Rk-qdg">
@@ -315,7 +316,6 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="addToCartButton:" destination="UDk-Lv-H3n" eventType="touchUpInside" id="l5m-xY-Ufs"/>
-                                                    <segue destination="G2a-vz-atI" kind="show" id="Xvp-hy-pkZ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -339,7 +339,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="Dcz-kF-Obm">
                             <color key="tintColor" name="mainColor"/>
                             <connections>
-                                <segue destination="G2a-vz-atI" kind="show" id="8FY-hR-7kQ"/>
+                                <action selector="toCartButton:" destination="UDk-Lv-H3n" id="12T-JK-606"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -350,11 +350,12 @@
                         <outlet property="foodImage" destination="JF1-lS-Cdd" id="PBo-qz-yL7"/>
                         <outlet property="foodName" destination="cVv-x8-ePJ" id="Y6e-jr-XUa"/>
                         <outlet property="foodPrice" destination="YNq-ug-5lM" id="X0K-SE-Su6"/>
+                        <segue destination="G2a-vz-atI" kind="show" identifier="toCartPage" id="2zF-kD-Kr5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGc-FY-egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2851" y="-281"/>
+            <point key="canvasLocation" x="2858" y="-702"/>
         </scene>
         <!--Cart Page-->
         <scene sceneID="XSK-cb-zhG">
@@ -370,11 +371,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-uh-v09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3697" y="-281"/>
+            <point key="canvasLocation" x="2858" y="114"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xvp-hy-pkZ"/>
+        <segue reference="fAj-5v-0RM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
