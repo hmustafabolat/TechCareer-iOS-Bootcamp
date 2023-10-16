@@ -40,18 +40,12 @@ class HomePage: UIViewController {
         yemeklerCollectionView.dataSource = self
         
         let design = UICollectionViewFlowLayout()
-        
         design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         design.minimumLineSpacing = 10
         design.minimumInteritemSpacing = 10
-        
-        //10 x 10 x 10 = 30
-        
         let ekranGenislik = UIScreen.main.bounds.width
         let itemGenislik = (ekranGenislik - 30) / 2
-        
         design.itemSize = CGSize(width: itemGenislik, height: itemGenislik * 1.5)
-        
         yemeklerCollectionView.collectionViewLayout = design
         
     }
@@ -84,10 +78,10 @@ class HomePage: UIViewController {
         performSegue(withIdentifier: "toCart", sender: nil)
     }
     
-    
 }
 
 extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, HucreProtocol{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return yemeklerListesi.count
     }
@@ -98,12 +92,8 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
         hucre.layer.borderWidth = 0.3
         hucre.layer.cornerRadius = 10
         let yemek = yemeklerListesi[indexPath.row]
-        if let yemekResimAdi = yemek.yemek_resim_adi {
-            yemeklerViewModel.yemekResminiYukle(yemekAdi: yemekResimAdi) { image in
-                DispatchQueue.main.async {
-                    hucre.imageCell.image = image
-                }
-            }
+        if let imageURL = yemek.yemek_resim_adi, let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(imageURL)") {
+            hucre.imageCell.kf.setImage(with: url)
         }
         hucre.titleLabel.text = "\(yemek.yemek_adi!)"
         hucre.priceLabel.text = "\(yemek.yemek_fiyat!) ₺"

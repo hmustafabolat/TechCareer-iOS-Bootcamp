@@ -22,6 +22,7 @@ class YemeklerCell: UICollectionViewCell {
     @IBOutlet weak var addCartButton: UIButton!
     
     
+    
     var hucreProtocol:HucreProtocol?
     var indexPath:IndexPath?
     
