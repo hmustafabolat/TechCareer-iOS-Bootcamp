@@ -8,12 +8,10 @@
 import UIKit
 
 class CartPage: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
     }
-    
     
 }

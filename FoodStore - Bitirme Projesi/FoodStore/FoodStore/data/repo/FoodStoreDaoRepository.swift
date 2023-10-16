@@ -13,18 +13,25 @@ import UIKit
 
 class FoodStoreDaoRepository {
     
-    var yemeklerListesi =  BehaviorSubject<[Yemekler]>(value: [Yemekler]())
-    var sepetListesi = BehaviorSubject<[SepettekiYemekler]>(value: [SepettekiYemekler]())
+    var foodsList =  BehaviorSubject<[FoodsModel]>(value: [FoodsModel]())
+    var cartList = BehaviorSubject<[CartFoodModel]>(value: [CartFoodModel]())
+    var foodCount = BehaviorSubject<Int>(value: 1)
+    var totalPrice = BehaviorSubject<Int>(value: 0)
+    
     //http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php
+    
+    init(){
+        
+    }
     
     func yemekleriListele(){
         let url = URL(string: "http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php")
         AF.request(url!, method: .get).response { response in
             if let data = response.data {
                 do{
-                    let dataResponse = try JSONDecoder().decode(YemeklerResponse.self, from: data)
+                    let dataResponse = try JSONDecoder().decode(FoodsResponse.self, from: data)
                     if let list = dataResponse.yemekler {
-                        self.yemeklerListesi.onNext(list)
+                        self.foodsList.onNext(list)
                 }
             }catch{
                 print(error.localizedDescription)
@@ -54,30 +61,80 @@ class FoodStoreDaoRepository {
         }
     
     
-    
-    func yemekDetaylarıGoster(){
+    func sepeteYemekEkle(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: Int, yemek_siparis_sayisi: Int, kullanici_adi: String){
+        let url = URL(string: "http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php")
+        let params:Parameters = ["yemek_adi":yemek_adi, "yemek_resim_adi":yemek_resim_adi, "yemek_fiyat":yemek_fiyat,"yemek_siparis_adet":yemek_siparis_sayisi, "kullanici_adi":kullanici_adi]
         
+        AF.request(url!, method: .post, parameters: params).response { response in
+            if let data = response.data {
+                do {
+                    let dataResponse = try JSONDecoder().decode(CRUDResponse.self, from: data)
+                    print("------- Sepete Yemek Ekle -------")
+                    print("Başarı : \(dataResponse.success!)")
+                    print("Mesaj : \(dataResponse.message!)")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
-    func detaydaAdetSec(){
+    func sepettekiYemekleriGoruntule(kullanici_adi : String){
+        let url = URL(string: "http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php")
+        let params:Parameters = ["kullanici_adi" : kullanici_adi]
         
+        AF.request(url!, method: .post, parameters: params).response {response in
+            if let data = response.data{
+                do {
+                    _ = try JSONSerialization.jsonObject(with: data)
+                    let dataResponse = try JSONDecoder().decode(CartFoodResponse.self, from: data)
+                    if let list = dataResponse.cart_foods {
+                        self.cartList.onNext(list)
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+        }
     }
     
-    func sepeteYemekEkle(){
+    
+    func sepettenYemekSil(sepet_yemek_id: Int, kullanici_adi: String){
+        let url = URL(string: "http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php")
+        let params:Parameters = ["sepet_yemek_id": sepet_yemek_id, "kullanici_adi": kullanici_adi]
         
+        AF.request(url!, method: .post, parameters: params).response { response in
+            if let data = response.data {
+                do {
+                    let dataResponse = try JSONDecoder().decode(CRUDResponse.self, from: data)
+                    print("------- Sepetten Yemek Sil -------")
+                    print("Başarı : \(dataResponse.success!)")
+                    print("Mesaj : \(dataResponse.message!)")
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
+            
+        }
     }
     
-    func sepettekiYemekleriGoruntule(){
-        
+    func increaseFoodCount() {
+        let newCount = (try? foodCount.value()) ?? 1
+        foodCount.onNext(newCount + 1)
     }
     
-    func sepettenYemekSil(){
-        
+    func decreaseFoodCount() {
+        let currentCount = (try? foodCount.value()) ?? 1
+        let newCount = max(currentCount - 1, 1)
+        foodCount.onNext(newCount)
     }
     
-    func yemekAra(aramaKelimesi:String){
-        
+    func calculatePrice(price: Int) {
+        let currentCount = (try? foodCount.value()) ?? 1
+        let newTotalPrice = Int(currentCount) * price
+        totalPrice.onNext(newTotalPrice)
     }
+    
     
     
 }

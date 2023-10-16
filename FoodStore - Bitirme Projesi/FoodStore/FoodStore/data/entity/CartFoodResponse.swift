@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SepettekiYemeklerResponse : Codable {
+class CartFoodResponse : Codable {
     var success:Int?
-    var message:String?
+    var cart_foods:[CartFoodModel]?
 }

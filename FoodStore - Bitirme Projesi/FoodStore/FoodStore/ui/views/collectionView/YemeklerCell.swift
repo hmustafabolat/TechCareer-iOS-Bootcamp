@@ -11,7 +11,7 @@ protocol HucreProtocol{
     func sepeteEkleTikla(indexPath:IndexPath)
 }
 
-class YemeklerHucre: UICollectionViewCell {
+class YemeklerCell: UICollectionViewCell {
     
     @IBOutlet weak var imageCell: UIImageView!
     
@@ -19,8 +19,8 @@ class YemeklerHucre: UICollectionViewCell {
     
     @IBOutlet weak var priceLabel: UILabel!
     
-    @IBAction func addCartButton(_ sender: Any) {
-    }
+    @IBOutlet weak var addCartButton: UIButton!
+    
     
     var hucreProtocol:HucreProtocol?
     var indexPath:IndexPath?

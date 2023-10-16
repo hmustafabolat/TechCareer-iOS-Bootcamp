@@ -7,13 +7,17 @@
 
 import Foundation
 
-class SepettekiYemekler : Codable {
+class CartFoodModel : Codable {
     var sepet_yemek_id:String?
     var yemek_adi:String?
     var yemek_resim_adi:String?
     var yemek_fiyat:String?
     var yemek_siparis_adet:Int?
     var kullanici_adi:String?
+    
+    init(){
+        
+    }
     
     init(sepet_yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: Int, kullanici_adi: String) {
         self.sepet_yemek_id = sepet_yemek_id

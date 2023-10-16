@@ -7,7 +7,7 @@
 
 import Foundation
 
-class YemeklerResponse : Codable {
+class FoodsResponse : Codable {
     var success : Int?
-    var yemekler : [Yemekler]?
+    var yemekler : [FoodsModel]?
 }
