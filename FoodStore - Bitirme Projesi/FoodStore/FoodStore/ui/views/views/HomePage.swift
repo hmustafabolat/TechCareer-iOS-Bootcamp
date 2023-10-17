@@ -17,6 +17,12 @@ class HomePage: UIViewController {
     
     var yemeklerListesi = [FoodsModel]()
     var yemeklerViewModel = HomePageViewModel()
+    var viewModel = DetailViewModel()
+    var cartLists = [CartFoodModel]()    
+    var foods:FoodsModel?
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,9 +71,32 @@ class HomePage: UIViewController {
     
     
     @objc func buttonAddToCart(sender: UIButton) {
-        let indexPath = IndexPath(row: sender.tag, section: 0)
-        let food = yemeklerListesi[indexPath.row]
-        yemeklerViewModel.sepeteYemekEkle(yemek_adi: food.yemek_adi!, yemek_resim_adi: food.yemek_resim_adi!, yemek_fiyat: Int(food.yemek_fiyat!)!, yemek_siparis_sayisi: 1, kullanici_adi: "mustafa")
+        if let foodObject = foods {
+            var sameName = false
+            var cartFood = CartFoodModel()
+            
+            for i in cartLists {
+                if i.yemek_adi == foodObject.yemek_adi {
+                    sameName = true
+                    cartFood = i
+                    break
+                } else {
+                    sameName = false
+                }
+            }
+            if sameName == true {
+                viewModel.sepettenYemekSil(sepet_yemek_id: Int(cartFood.sepet_yemek_id!)!, kullanici_adi: "mustafa")
+                let foodCountValue = (try? viewModel.foodCount.value()) ?? 1
+                viewModel.sepeteYemekEkle(yemek_adi: foodObject.yemek_adi!, yemek_resim_adi: foodObject.yemek_resim_adi!, yemek_fiyat: Int(foodObject.yemek_fiyat!)!, yemek_siparis_sayisi: foodCountValue + Int( cartFood.yemek_siparis_adet!)!, kullanici_adi: "mustafa")
+                print("Yemek Sepete eklendi: \(foodObject.yemek_adi!) - \(foodCountValue)")
+                navigationController?.popViewController(animated: true)
+            } else {
+                let foodCountValue = (try? viewModel.foodCount.value()) ?? 1
+                viewModel.sepeteYemekEkle(yemek_adi: foodObject.yemek_adi!, yemek_resim_adi: foodObject.yemek_resim_adi!, yemek_fiyat: Int(foodObject.yemek_fiyat!)!, yemek_siparis_sayisi: foodCountValue, kullanici_adi: "mustafa")
+                print("Yemek Sepete eklendi: \(foodObject.yemek_adi!) - \(foodCountValue)")
+                navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     

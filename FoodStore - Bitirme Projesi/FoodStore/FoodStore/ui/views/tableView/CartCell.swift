@@ -15,6 +15,8 @@ class CartCell: UITableViewCell {
     @IBOutlet weak var cartFoodPiece: UILabel!
     @IBOutlet weak var cartButtonDelete: UIButton!
     @IBOutlet weak var cartFoodTotalPrice: UILabel!
+    @IBOutlet weak var cartDeleteButton: UIButton!
+    
     
     
     

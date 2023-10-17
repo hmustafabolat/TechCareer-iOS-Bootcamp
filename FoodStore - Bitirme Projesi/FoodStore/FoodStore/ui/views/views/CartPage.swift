@@ -12,6 +12,8 @@ import RxSwift
 class CartPage: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalPriceCart: UILabel!
+    
     var cartList = [CartFoodModel]()
     var viewModel = CartPageViewModel()
     
@@ -26,10 +28,26 @@ class CartPage: UIViewController {
             print(self.cartList.count)
             self.tableView.reloadData()
         })
+        
+
+        
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         viewModel.sepettekiYemekleriGoruntule(kullanici_adi: "mustafa")
+    }
+
+    
+    @objc func deleteButtonTapped(_ sender: UIButton) {
+        // İlgili hücrenin indeksini al
+        if let cell = sender.superview?.superview as? CartCell, let indexPath = tableView.indexPath(for: cell) {
+            // Sepetten ürünü kaldır
+            let yemek = cartList[indexPath.row]
+            viewModel.sepettenYemekSil(sepet_yemek_id: Int(yemek.sepet_yemek_id!) ?? 0, kullanici_adi: "mustafa")
+            cartList.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
     }
     
 }
@@ -50,6 +68,7 @@ extension CartPage: UITableViewDelegate, UITableViewDataSource {
         hucre.cartFoodPrice.text = yemek.yemek_fiyat
         hucre.cartFoodTotalPrice.text = "\(Int(yemek.yemek_fiyat!)! * Int(yemek.yemek_siparis_adet!)!)₺"
         hucre.cartFoodPiece.text = yemek.yemek_siparis_adet
+        hucre.cartDeleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
         
         
         return hucre

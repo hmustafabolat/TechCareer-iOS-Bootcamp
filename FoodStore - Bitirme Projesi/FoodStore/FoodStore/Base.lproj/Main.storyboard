@@ -267,7 +267,7 @@
                                                             <color key="baseBackgroundColor" name="text1"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="minusButton:" destination="UDk-Lv-H3n" eventType="touchUpInside" id="lb6-kR-Tx2"/>
+                                                            <action selector="buttonMinus:" destination="UDk-Lv-H3n" eventType="touchUpInside" id="DaJ-g4-T3V"/>
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet Sayısı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRI-uE-so4">
@@ -285,7 +285,7 @@
                                                             <color key="baseBackgroundColor" name="text1"/>
                                                         </buttonConfiguration>
                                                         <connections>
-                                                            <action selector="plusButton:" destination="UDk-Lv-H3n" eventType="touchUpInside" id="R4c-H4-HFR"/>
+                                                            <action selector="buttonPlus:" destination="UDk-Lv-H3n" eventType="touchUpInside" id="tze-Mr-Wc4"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -307,6 +307,9 @@
                                                 <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
                                                     <color key="baseBackgroundColor" name="mainColor"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="addCartButton:" destination="UDk-Lv-H3n" eventType="touchUpInside" id="dQG-wI-A49"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -329,7 +332,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="Dcz-kF-Obm">
                             <color key="tintColor" name="mainColor"/>
                             <connections>
-                                <action selector="toCartButton:" destination="UDk-Lv-H3n" id="12T-JK-606"/>
+                                <action selector="toCartButton:" destination="UDk-Lv-H3n" id="6Gg-IG-csN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -394,6 +397,7 @@
                                                     <rect key="frame" x="306" y="11" width="48" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="Exf-G5-CEI"/>
+                                                        <constraint firstAttribute="width" constant="48" id="hug-1G-TgW"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system">
@@ -428,6 +432,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cartButtonDelete" destination="VXQ-Ei-YE9" id="5vH-PF-JT9"/>
+                                            <outlet property="cartDeleteButton" destination="VXQ-Ei-YE9" id="fw4-6v-bGR"/>
                                             <outlet property="cartFoodImage" destination="8Pq-47-I6Q" id="vyu-Q1-PKD"/>
                                             <outlet property="cartFoodName" destination="A47-le-ZjQ" id="KkU-vB-3ia"/>
                                             <outlet property="cartFoodPiece" destination="HmN-od-qTx" id="i2h-LX-Q5m"/>
@@ -480,6 +485,7 @@
                     <navigationItem key="navigationItem" title="Sepetim" id="Fi4-qP-ikT"/>
                     <connections>
                         <outlet property="tableView" destination="jSw-NA-AQ9" id="kNI-FP-tLM"/>
+                        <outlet property="totalPriceCart" destination="HGY-8Q-yUf" id="pdD-gK-m89"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-uh-v09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -489,7 +495,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fAj-5v-0RM"/>
+        <segue reference="2zF-kD-Kr5"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>

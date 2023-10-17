@@ -15,7 +15,6 @@ class DetailPage: UIViewController {
     @IBOutlet weak var foodName: UILabel!
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var foodAbout: UILabel!
     @IBOutlet weak var totalFoodPrice: UILabel!
     
     var foods:FoodsModel?
@@ -41,6 +40,8 @@ class DetailPage: UIViewController {
                 self.cartLists = cartList
             })
             
+            
+            
         }
     }
     
@@ -48,7 +49,23 @@ class DetailPage: UIViewController {
         viewModel.frepo.sepettekiYemekleriGoruntule(kullanici_adi: "mustafa")
     }
     
-    @IBAction func addToCartButton(_ sender: Any) {
+    
+    @IBAction func buttonMinus(_ sender: Any) {
+        viewModel.decreaseFoodCount()
+        viewModel.calculatePrice(price: Int((foods?.yemek_fiyat)!)!)
+    }
+    
+    @IBAction func buttonPlus(_ sender: Any) {
+        viewModel.increaseFoodCount()
+        viewModel.calculatePrice(price: Int((foods?.yemek_fiyat)!)!)
+    }
+    
+    @IBAction func toCartButton(_ sender: Any) {
+        performSegue(withIdentifier: "toCartPage", sender: nil)
+    }
+    
+    
+    @IBAction func addCartButton(_ sender: Any) {
         if let foodObject = foods {
             var sameName = false
             var cartFood = CartFoodModel()
@@ -62,7 +79,6 @@ class DetailPage: UIViewController {
                     sameName = false
                 }
             }
-            
             if sameName == true {
                 viewModel.sepettenYemekSil(sepet_yemek_id: Int(cartFood.sepet_yemek_id!)!, kullanici_adi: "mustafa")
                 let foodCountValue = (try? viewModel.foodCount.value()) ?? 1
@@ -75,27 +91,6 @@ class DetailPage: UIViewController {
                 print("Yemek Sepete eklendi: \(foodObject.yemek_adi!) - \(foodCountValue)")
                 navigationController?.popViewController(animated: true)
             }
-          
         }
     }
-    
-    
-    @IBAction func minusButton(_ sender: Any) {
-        viewModel.decreaseFoodCount()
-        viewModel.calculatePrice(price: Int((foods?.yemek_fiyat)!)!)
-    }
-    
-    @IBAction func plusButton(_ sender: Any) {
-        viewModel.increaseFoodCount()
-        viewModel.calculatePrice(price: Int((foods?.yemek_fiyat)!)!)
-    }
-    
-    @IBAction func toCartButton(_ sender: Any) {
-        performSegue(withIdentifier: "toCartPage", sender: nil)
-    }
-    
-    @IBAction func addCartButton(_ sender: Any) {
-       
-    }
-    
 }
