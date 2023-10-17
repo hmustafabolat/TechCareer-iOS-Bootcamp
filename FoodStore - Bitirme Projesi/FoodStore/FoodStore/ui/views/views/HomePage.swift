@@ -63,16 +63,13 @@ class HomePage: UIViewController {
         }
     }
     
+    
     @objc func buttonAddToCart(sender: UIButton) {
         let indexPath = IndexPath(row: sender.tag, section: 0)
         let food = yemeklerListesi[indexPath.row]
         yemeklerViewModel.sepeteYemekEkle(yemek_adi: food.yemek_adi!, yemek_resim_adi: food.yemek_resim_adi!, yemek_fiyat: Int(food.yemek_fiyat!)!, yemek_siparis_sayisi: 1, kullanici_adi: "mustafa")
     }
     
-    
-    @IBAction func addCartButton(_ sender: Any) {
-        
-    }
     
     @IBAction func cartButton(_ sender: Any) {
         performSegue(withIdentifier: "toCart", sender: nil)
@@ -101,6 +98,7 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
         hucre.addCartButton.addTarget(self, action: #selector(buttonAddToCart), for: .touchUpInside)
         hucre.indexPath = indexPath
         hucre.hucreProtocol = self
+        
         
         return hucre
     }

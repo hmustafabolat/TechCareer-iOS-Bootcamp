@@ -23,6 +23,7 @@ class YemeklerCell: UICollectionViewCell {
     
     
     
+    
     var hucreProtocol:HucreProtocol?
     var indexPath:IndexPath?
     

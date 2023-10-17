@@ -9,6 +9,7 @@ import Foundation
 import RxSwift
 import UIKit
 
+
 class HomePageViewModel {
     var frepo = FoodStoreDaoRepository()
     var yemekListesi = BehaviorSubject<[FoodsModel]>(value: [FoodsModel]())
@@ -27,7 +28,7 @@ class HomePageViewModel {
         }
     }
     
-    func sepettekiYemekleriListele(kullanici_adi: String){
+    func sepettekiYemekleriGoruntule(kullanici_adi: String){
         frepo.sepettekiYemekleriGoruntule(kullanici_adi: kullanici_adi)
     }
     

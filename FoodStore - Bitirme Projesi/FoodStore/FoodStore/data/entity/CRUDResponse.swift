@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CRUDResponse : Codable {
+class CRUDResponse: Codable {
     var success:Int?
-    var message:String?  
+    var message:String?
 }

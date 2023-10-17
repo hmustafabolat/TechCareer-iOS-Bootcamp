@@ -86,10 +86,12 @@ class FoodStoreDaoRepository {
         AF.request(url!, method: .post, parameters: params).response {response in
             if let data = response.data{
                 do {
-                    _ = try JSONSerialization.jsonObject(with: data)
+                    //let rawResponse = try JSONSerialization.jsonObject(with: data)
+                    //print(rawResponse)
                     let dataResponse = try JSONDecoder().decode(CartFoodResponse.self, from: data)
-                    if let list = dataResponse.cart_foods {
+                    if let list = dataResponse.sepet_yemekler {
                         self.cartList.onNext(list)
+                        print(list.count)
                     }
                 } catch {
                     print(error.localizedDescription)

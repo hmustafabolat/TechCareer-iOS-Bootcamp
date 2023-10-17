@@ -66,7 +66,7 @@ class DetailPage: UIViewController {
             if sameName == true {
                 viewModel.sepettenYemekSil(sepet_yemek_id: Int(cartFood.sepet_yemek_id!)!, kullanici_adi: "mustafa")
                 let foodCountValue = (try? viewModel.foodCount.value()) ?? 1
-                viewModel.sepeteYemekEkle(yemek_adi: foodObject.yemek_adi!, yemek_resim_adi: foodObject.yemek_resim_adi!, yemek_fiyat: Int(foodObject.yemek_fiyat!)!, yemek_siparis_sayisi: foodCountValue + Int(exactly: cartFood.yemek_siparis_adet!)!, kullanici_adi: "mustafa")
+                viewModel.sepeteYemekEkle(yemek_adi: foodObject.yemek_adi!, yemek_resim_adi: foodObject.yemek_resim_adi!, yemek_fiyat: Int(foodObject.yemek_fiyat!)!, yemek_siparis_sayisi: foodCountValue + Int( cartFood.yemek_siparis_adet!)!, kullanici_adi: "mustafa")
                 print("Yemek Sepete eklendi: \(foodObject.yemek_adi!) - \(foodCountValue)")
                 navigationController?.popViewController(animated: true)
             } else {

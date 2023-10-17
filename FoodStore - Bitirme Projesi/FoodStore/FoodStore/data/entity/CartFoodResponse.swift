@@ -10,5 +10,5 @@ import Foundation
 
 class CartFoodResponse : Codable {
     var success:Int?
-    var cart_foods:[CartFoodModel]?
+    var sepet_yemekler:[CartFoodModel]?
 }

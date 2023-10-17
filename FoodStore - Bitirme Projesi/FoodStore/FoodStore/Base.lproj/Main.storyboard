@@ -139,9 +139,6 @@
                                                     <buttonConfiguration key="configuration" style="filled" title="+">
                                                         <color key="baseBackgroundColor" name="mainColor"/>
                                                     </buttonConfiguration>
-                                                    <connections>
-                                                        <action selector="addCartButton:" destination="yHX-JA-qaa" eventType="touchUpInside" id="hyn-lp-64Z"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -158,7 +155,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="176" height="284"/>
                                         <connections>
-                                            <outlet property="addCartButton" destination="q8w-ot-oD3" id="kua-m1-1eA"/>
+                                            <outlet property="addCartButton" destination="q8w-ot-oD3" id="XWN-IJ-RIh"/>
                                             <outlet property="imageCell" destination="7X3-gn-yhl" id="PR1-io-Atc"/>
                                             <outlet property="priceLabel" destination="Tp9-WA-6Er" id="vHe-RZ-E2r"/>
                                             <outlet property="titleLabel" destination="HWJ-Jl-dbf" id="ED9-2J-erh"/>
@@ -357,7 +354,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jSw-NA-AQ9">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jSw-NA-AQ9">
                                 <rect key="frame" x="20" y="92" width="374" height="537"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -370,6 +367,10 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8Pq-47-I6Q">
                                                     <rect key="frame" x="0.0" y="5" width="108" height="115"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="108" id="8YP-PF-pD9"/>
+                                                        <constraint firstAttribute="height" constant="115" id="qdl-WZ-D5o"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A47-le-ZjQ">
                                                     <rect key="frame" x="136" y="11" width="99" height="24"/>
@@ -391,6 +392,9 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXQ-Ei-YE9">
                                                     <rect key="frame" x="306" y="11" width="48" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="Exf-G5-CEI"/>
+                                                    </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="filled" image="trash" catalog="system">
                                                         <color key="baseBackgroundColor" name="mainColor"/>
@@ -423,12 +427,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="TotalPrice" destination="SvF-7j-GM9" id="0mD-mh-oqd"/>
                                             <outlet property="cartButtonDelete" destination="VXQ-Ei-YE9" id="5vH-PF-JT9"/>
                                             <outlet property="cartFoodImage" destination="8Pq-47-I6Q" id="vyu-Q1-PKD"/>
                                             <outlet property="cartFoodName" destination="A47-le-ZjQ" id="KkU-vB-3ia"/>
                                             <outlet property="cartFoodPiece" destination="HmN-od-qTx" id="i2h-LX-Q5m"/>
                                             <outlet property="cartFoodPrice" destination="tq7-NR-HSn" id="NwN-c5-Qy2"/>
+                                            <outlet property="cartFoodTotalPrice" destination="SvF-7j-GM9" id="0mD-mh-oqd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -474,6 +478,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sepetim" id="Fi4-qP-ikT"/>
+                    <connections>
+                        <outlet property="tableView" destination="jSw-NA-AQ9" id="kNI-FP-tLM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-uh-v09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ua6-Yy-BY9" userLabel="Exit" sceneMemberID="exit"/>

@@ -14,11 +14,7 @@ class CartCell: UITableViewCell {
     @IBOutlet weak var cartFoodPrice: UILabel!
     @IBOutlet weak var cartFoodPiece: UILabel!
     @IBOutlet weak var cartButtonDelete: UIButton!
-    @IBOutlet weak var TotalPrice: UILabel!
-    
-    
-    @IBAction func cartPayment(_ sender: Any) {
-    }
+    @IBOutlet weak var cartFoodTotalPrice: UILabel!
     
     
     
