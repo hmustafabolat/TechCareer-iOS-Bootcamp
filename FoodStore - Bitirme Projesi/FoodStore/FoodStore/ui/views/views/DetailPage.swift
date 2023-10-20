@@ -91,6 +91,9 @@ class DetailPage: UIViewController {
                 print("Yemek Sepete eklendi: \(foodObject.yemek_adi!) - \(foodCountValue)")
                 navigationController?.popViewController(animated: true)
             }
+          
         }
     }
+
+    
 }

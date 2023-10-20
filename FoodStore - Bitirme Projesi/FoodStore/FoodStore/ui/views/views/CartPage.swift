@@ -27,11 +27,9 @@ class CartPage: UIViewController {
             self.cartList = cartList
             print(self.cartList.count)
             self.tableView.reloadData()
+            
         })
         
-
-        
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,8 +45,12 @@ class CartPage: UIViewController {
             viewModel.sepettenYemekSil(sepet_yemek_id: Int(yemek.sepet_yemek_id!) ?? 0, kullanici_adi: "mustafa")
             cartList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            
+            // Ürün silindiğinde fiyat toplamını güncelleyin
+            viewModel.calculatePrice(price: -Int(yemek.yemek_fiyat!)!) // Silinen ürünün fiyatını çıkarın
         }
     }
+
     
 }
 

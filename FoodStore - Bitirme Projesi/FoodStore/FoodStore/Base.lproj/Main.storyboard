@@ -10,25 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Start Page-->
+        <!--Login Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="a4g-Aj-r2V">
                                 <rect key="frame" x="-400.5" y="-851.5" width="1215" height="1215"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kapınıza kadar hızlı teslimat         " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93w-Ha-912">
-                                <rect key="frame" x="62" y="394.5" width="290" height="72"/>
+                                <rect key="frame" x="62" y="300" width="290" height="111"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                 <color key="textColor" name="text1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGJ-Eh-eOh">
-                                <rect key="frame" x="32" y="501.5" width="350" height="105.5"/>
+                                <rect key="frame" x="32" y="435" width="350" height="105.5"/>
                                 <string key="text">Restoranlar ve kafeler için eve teslimat ve online rezervasyon sistemi
 </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BJ-Ij-rz3">
-                                <rect key="frame" x="38" y="766" width="338" height="47"/>
+                                <rect key="frame" x="50" y="733.5" width="314" height="47"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Hadi keşfedelim" titleAlignment="center">
                                     <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
@@ -44,48 +44,201 @@
                                     <color key="baseBackgroundColor" name="text1"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="yHX-JA-qaa" kind="show" id="y9b-G3-Kkv"/>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d3n-6H-auu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test@gmail.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mMf-Kb-k3x">
+                                <rect key="frame" x="50" y="550.5" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="-30" translatesAutoresizingMaskIntoConstraints="NO" id="CsZ-ha-LDl">
+                                <rect key="frame" x="50" y="668.5" width="314" height="35"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Henüz Hesabınız Yok mu?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wga-Rk-bSg">
+                                        <rect key="frame" x="0.0" y="7.5" width="197" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="text1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYB-ik-t0c">
+                                        <rect key="frame" x="167" y="0.0" width="147" height="35"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Kaydol">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                            <color key="baseForegroundColor" name="text1"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nci-Za-IV1"/>
+                                            <segue destination="XJ2-7A-TDm" kind="presentation" identifier="toRegister" id="CT7-PE-ZPG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Parola" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aVm-nD-TRL">
+                                <rect key="frame" x="50" y="609.5" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="mainColor"/>
                         <constraints>
-                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="12j-RB-N3X"/>
-                            <constraint firstItem="93w-Ha-912" firstAttribute="centerX" secondItem="a4g-Aj-r2V" secondAttribute="centerX" id="Eyb-A6-IcZ"/>
-                            <constraint firstItem="93w-Ha-912" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="H8v-rw-jK8"/>
-                            <constraint firstItem="93w-Ha-912" firstAttribute="centerX" secondItem="9BJ-Ij-rz3" secondAttribute="centerX" id="OXf-k4-dj9"/>
-                            <constraint firstItem="93w-Ha-912" firstAttribute="top" secondItem="a4g-Aj-r2V" secondAttribute="bottom" constant="31" id="Yve-BR-RTS"/>
-                            <constraint firstItem="93w-Ha-912" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cCx-4i-ed5"/>
-                            <constraint firstItem="9BJ-Ij-rz3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="eWt-KD-k7G"/>
-                            <constraint firstAttribute="bottom" secondItem="93w-Ha-912" secondAttribute="bottom" constant="429.33333333333331" id="rG1-nh-PUe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGJ-Eh-eOh" secondAttribute="trailing" constant="32" id="tDJ-Yx-8Le"/>
-                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="top" secondItem="93w-Ha-912" secondAttribute="bottom" constant="35" id="uyu-Le-Uto"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="9BJ-Ij-rz3" secondAttribute="bottom" constant="49" id="xeK-GH-xDG"/>
+                            <constraint firstItem="9BJ-Ij-rz3" firstAttribute="top" secondItem="CsZ-ha-LDl" secondAttribute="bottom" constant="30" id="1IK-jn-DrH"/>
+                            <constraint firstItem="CsZ-ha-LDl" firstAttribute="top" secondItem="aVm-nD-TRL" secondAttribute="bottom" constant="25" id="62U-h8-Bg8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aGJ-Eh-eOh" secondAttribute="trailing" constant="32" id="64a-bF-8gN"/>
+                            <constraint firstItem="mMf-Kb-k3x" firstAttribute="top" secondItem="aGJ-Eh-eOh" secondAttribute="bottom" constant="10" id="6Hb-Vb-N7I"/>
+                            <constraint firstItem="a4g-Aj-r2V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-851.5" id="Fd3-qf-IYh"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="HQS-hw-dhG"/>
+                            <constraint firstItem="a4g-Aj-r2V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-400.5" id="I6N-OF-dQq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CsZ-ha-LDl" secondAttribute="trailing" constant="50" id="L0e-GO-of6"/>
+                            <constraint firstItem="aVm-nD-TRL" firstAttribute="top" secondItem="mMf-Kb-k3x" secondAttribute="bottom" constant="25" id="M5c-dv-cUL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aVm-nD-TRL" secondAttribute="trailing" constant="50" id="OLi-Id-PuI"/>
+                            <constraint firstItem="9BJ-Ij-rz3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ow0-hU-Spz"/>
+                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="top" secondItem="93w-Ha-912" secondAttribute="bottom" constant="24" id="SkO-YX-Xq2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9BJ-Ij-rz3" secondAttribute="trailing" constant="50" id="UbV-an-sF1"/>
+                            <constraint firstItem="93w-Ha-912" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="WZE-hO-m4Z"/>
+                            <constraint firstItem="mMf-Kb-k3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Y1s-td-f7N"/>
+                            <constraint firstItem="CsZ-ha-LDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="fA0-VP-cJc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="93w-Ha-912" secondAttribute="trailing" constant="62" id="fQf-6d-usy"/>
+                            <constraint firstItem="aVm-nD-TRL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="kdO-5n-HqK"/>
+                            <constraint firstAttribute="trailing" secondItem="a4g-Aj-r2V" secondAttribute="trailing" constant="-400.5" id="kvz-Ri-6fh"/>
+                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="top" secondItem="a4g-Aj-r2V" secondAttribute="bottom" constant="71.5" id="kxO-ZG-234"/>
+                            <constraint firstItem="aGJ-Eh-eOh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="q6t-c4-b2r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mMf-Kb-k3x" secondAttribute="trailing" constant="50" id="qsV-PI-2nt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AZQ-KX-ecD"/>
+                    <connections>
+                        <outlet property="emailTF" destination="mMf-Kb-k3x" id="Rb0-jW-m05"/>
+                        <outlet property="passwordTF" destination="aVm-nD-TRL" id="Jah-W9-a0e"/>
+                        <segue destination="yHX-JA-qaa" kind="show" identifier="homeCollectionVC" id="79F-ML-9b3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1052.6717557251909" y="4.9295774647887329"/>
+            <point key="canvasLocation" x="1043" y="5"/>
+        </scene>
+        <!--Register Page-->
+        <scene sceneID="g9S-4d-lQf">
+            <objects>
+                <viewController id="XJ2-7A-TDm" customClass="RegisterPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Qf-wJ-yES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salad" translatesAutoresizingMaskIntoConstraints="NO" id="wHu-df-DKL">
+                                <rect key="frame" x="-405" y="-851" width="1224" height="1215"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bize katılmak ister misin?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r08-7H-cea">
+                                <rect key="frame" x="50" y="384" width="314" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" name="text1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BX8-7q-n7n">
+                                <rect key="frame" x="50" y="486" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Parola" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atH-yX-xSr">
+                                <rect key="frame" x="50" y="634" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-iG-PAY">
+                                <rect key="frame" x="50" y="708" width="314" height="39"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zaten Bir Hesabın Var mı?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vCU-X1-fJz">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" name="text1"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntl-sg-XTa">
+                                        <rect key="frame" x="196" y="0.0" width="118" height="39"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Giriş Yap">
+                                            <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="text1"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginButton:" destination="XJ2-7A-TDm" eventType="touchUpInside" id="3xH-FF-Ddf"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="toLogin" id="7VO-VN-hU0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYC-U9-o11">
+                                <rect key="frame" x="50" y="767" width="314" height="43"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Kaydol">
+                                    <fontDescription key="titleFontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="25"/>
+                                    <color key="baseForegroundColor" name="mainColor"/>
+                                    <color key="baseBackgroundColor" name="text1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerButton:" destination="XJ2-7A-TDm" eventType="touchUpInside" id="kyu-lA-LVl"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6g-LI-OSn">
+                                <rect key="frame" x="50" y="560" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2AQ-9O-lpB"/>
+                        <color key="backgroundColor" name="mainColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wHu-df-DKL" secondAttribute="trailing" constant="-405" id="0WU-BP-5y3"/>
+                            <constraint firstItem="2AQ-9O-lpB" firstAttribute="trailing" secondItem="BX8-7q-n7n" secondAttribute="trailing" constant="50" id="14v-LE-Ehf"/>
+                            <constraint firstItem="BX8-7q-n7n" firstAttribute="top" secondItem="r08-7H-cea" secondAttribute="bottom" constant="30" id="2QF-X1-4RB"/>
+                            <constraint firstItem="LYC-U9-o11" firstAttribute="top" secondItem="RIa-iG-PAY" secondAttribute="bottom" constant="20" id="2j7-xy-pb4"/>
+                            <constraint firstItem="2AQ-9O-lpB" firstAttribute="trailing" secondItem="h6g-LI-OSn" secondAttribute="trailing" constant="50" id="9x9-na-bIU"/>
+                            <constraint firstItem="RIa-iG-PAY" firstAttribute="top" secondItem="atH-yX-xSr" secondAttribute="bottom" constant="40" id="ByJ-N8-s3P"/>
+                            <constraint firstItem="wHu-df-DKL" firstAttribute="leading" secondItem="2Qf-wJ-yES" secondAttribute="leading" constant="-405" id="Cy5-sa-eCG"/>
+                            <constraint firstItem="RIa-iG-PAY" firstAttribute="leading" secondItem="2AQ-9O-lpB" secondAttribute="leading" constant="50" id="DZp-KI-ze1"/>
+                            <constraint firstItem="2AQ-9O-lpB" firstAttribute="trailing" secondItem="LYC-U9-o11" secondAttribute="trailing" constant="50" id="GHT-Mr-sYs"/>
+                            <constraint firstItem="r08-7H-cea" firstAttribute="leading" secondItem="2AQ-9O-lpB" secondAttribute="leading" constant="50" id="YIx-Sq-mo4"/>
+                            <constraint firstItem="atH-yX-xSr" firstAttribute="leading" secondItem="2AQ-9O-lpB" secondAttribute="leading" constant="50" id="YUw-yY-rh6"/>
+                            <constraint firstItem="BX8-7q-n7n" firstAttribute="leading" secondItem="2AQ-9O-lpB" secondAttribute="leading" constant="50" id="aV7-3Q-8sB"/>
+                            <constraint firstItem="2AQ-9O-lpB" firstAttribute="trailing" secondItem="atH-yX-xSr" secondAttribute="trailing" constant="50" id="c4h-8w-Tsk"/>
+                            <constraint firstItem="atH-yX-xSr" firstAttribute="top" secondItem="h6g-LI-OSn" secondAttribute="bottom" constant="40" id="dX4-vI-kjR"/>
+                            <constraint firstItem="2AQ-9O-lpB" firstAttribute="trailing" secondItem="r08-7H-cea" secondAttribute="trailing" constant="50" id="jGV-hw-wwK"/>
+                            <constraint firstItem="wHu-df-DKL" firstAttribute="top" secondItem="2Qf-wJ-yES" secondAttribute="top" constant="-851" id="n9h-Xr-fcf"/>
+                            <constraint firstItem="2AQ-9O-lpB" firstAttribute="trailing" secondItem="RIa-iG-PAY" secondAttribute="trailing" constant="50" id="nrz-a9-MeQ"/>
+                            <constraint firstItem="r08-7H-cea" firstAttribute="top" secondItem="wHu-df-DKL" secondAttribute="bottom" constant="20" id="o5k-iV-YOr"/>
+                            <constraint firstItem="LYC-U9-o11" firstAttribute="leading" secondItem="2AQ-9O-lpB" secondAttribute="leading" constant="50" id="oUG-Ab-WSI"/>
+                            <constraint firstItem="h6g-LI-OSn" firstAttribute="top" secondItem="BX8-7q-n7n" secondAttribute="bottom" constant="40" id="xyX-NE-iWV"/>
+                            <constraint firstItem="h6g-LI-OSn" firstAttribute="leading" secondItem="2AQ-9O-lpB" secondAttribute="leading" constant="50" id="ykk-Oq-SZA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="14d-Yr-veC"/>
+                    <connections>
+                        <outlet property="emailTF" destination="BX8-7q-n7n" id="8AJ-ig-jKr"/>
+                        <outlet property="passwordTF" destination="atH-yX-xSr" id="xGB-BA-aSL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LSg-Vr-AUY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1939" y="5"/>
         </scene>
         <!--Sepet-->
         <scene sceneID="nWD-tA-xTd">
             <objects>
                 <viewController id="yHX-JA-qaa" customClass="HomePage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3GT-Jh-vSF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kullanıcı Adı" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evg-5v-cBt">
-                                <rect key="frame" x="20" y="102" width="109" height="24"/>
+                                <rect key="frame" x="20" y="10" width="109" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <color key="textColor" name="mainColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" placeholder="Yemek Ara" translatesAutoresizingMaskIntoConstraints="NO" id="bS3-2s-cLP">
-                                <rect key="frame" x="0.0" y="131" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="39" width="414" height="56"/>
                                 <color key="barTintColor" name="searchBar"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -93,7 +246,7 @@
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" prefetchingEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dub-dI-G8O">
-                                <rect key="frame" x="0.0" y="187" width="414" height="675"/>
+                                <rect key="frame" x="0.0" y="95" width="414" height="791"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DYl-oh-JLg">
                                     <size key="itemSize" width="176" height="284"/>
@@ -155,7 +308,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="176" height="284"/>
                                         <connections>
-                                            <outlet property="addCartButton" destination="q8w-ot-oD3" id="XWN-IJ-RIh"/>
+                                            <outlet property="addCartButton" destination="q8w-ot-oD3" id="XDJ-kA-qMp"/>
                                             <outlet property="imageCell" destination="7X3-gn-yhl" id="PR1-io-Atc"/>
                                             <outlet property="priceLabel" destination="Tp9-WA-6Er" id="vHe-RZ-E2r"/>
                                             <outlet property="titleLabel" destination="HWJ-Jl-dbf" id="ED9-2J-erh"/>
@@ -197,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N11-p6-QkT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1995.6521739130437" y="4.6875"/>
+            <point key="canvasLocation" x="2777" y="5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eSt-Rk-qdg">
@@ -222,33 +375,33 @@
             <objects>
                 <viewController id="UDk-Lv-H3n" customClass="DetailPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mZC-EA-Vwo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JF1-lS-Cdd">
-                                <rect key="frame" x="0.0" y="92" width="414" height="353"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="353"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="353" id="3X1-Rx-7TZ"/>
                                     <constraint firstAttribute="width" constant="414" id="w3L-BC-GKr"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-HI-Fnu">
-                                <rect key="frame" x="16" y="445" width="382" height="407"/>
+                                <rect key="frame" x="16" y="353" width="382" height="523"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="WIP-kj-Usg">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="299.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="384.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qpQ-Xl-Vrm">
-                                                <rect key="frame" x="133.5" y="0.0" width="115.5" height="149.5"/>
+                                                <rect key="frame" x="133.5" y="0.0" width="115.5" height="192.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Yemek İsmi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVv-x8-ePJ">
-                                                        <rect key="frame" x="4" y="0.0" width="107.5" height="75"/>
+                                                        <rect key="frame" x="4" y="0.0" width="107.5" height="96"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yemek Fiyatı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNq-ug-5lM">
-                                                        <rect key="frame" x="0.0" y="75" width="115.5" height="74.5"/>
+                                                        <rect key="frame" x="0.0" y="96" width="115.5" height="96.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -256,10 +409,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="atu-Ag-ZBh">
-                                                <rect key="frame" x="65" y="149.5" width="252" height="150"/>
+                                                <rect key="frame" x="65" y="192.5" width="252" height="192"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ae1-79-ODY">
-                                                        <rect key="frame" x="0.0" y="53.5" width="84" height="43"/>
+                                                        <rect key="frame" x="0.0" y="74.5" width="84" height="43"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="-">
                                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
@@ -271,13 +424,13 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adet Sayısı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRI-uE-so4">
-                                                        <rect key="frame" x="84" y="65" width="84" height="20.5"/>
+                                                        <rect key="frame" x="84" y="86" width="84" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6L-mf-FeI">
-                                                        <rect key="frame" x="168" y="53.5" width="84" height="43"/>
+                                                        <rect key="frame" x="168" y="74.5" width="84" height="43"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled" title="+">
                                                             <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="25"/>
@@ -293,16 +446,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="OGZ-M8-K4v">
-                                        <rect key="frame" x="0.0" y="299.5" width="382" height="107.5"/>
+                                        <rect key="frame" x="0.0" y="384.5" width="382" height="138.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Fiyat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yKz-I3-OCT">
-                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="107.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="138.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMc-eA-iLe">
-                                                <rect key="frame" x="127.5" y="0.0" width="254.5" height="107.5"/>
+                                                <rect key="frame" x="127.5" y="0.0" width="254.5" height="138.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Sepete Ekle">
                                                     <color key="baseBackgroundColor" name="mainColor"/>
@@ -347,18 +500,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fGc-FY-egj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3070" y="-339"/>
+            <point key="canvasLocation" x="4017" y="-370"/>
         </scene>
         <!--Sepetim-->
         <scene sceneID="XSK-cb-zhG">
             <objects>
                 <viewController id="G2a-vz-atI" customClass="CartPage" customModule="FoodStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TVp-Xw-ot3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jSw-NA-AQ9">
-                                <rect key="frame" x="20" y="92" width="374" height="537"/>
+                                <rect key="frame" x="20" y="0.0" width="374" height="619"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cartTableVC" rowHeight="125" id="tQu-Xq-ndV" customClass="CartCell" customModule="FoodStore" customModuleProvider="target">
@@ -443,19 +596,19 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepet Toplamı:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBF-xh-pck">
-                                <rect key="frame" x="20" y="662" width="172" height="30"/>
+                                <rect key="frame" x="20" y="652" width="172" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="55 ₺" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGY-8Q-yUf">
-                                <rect key="frame" x="340" y="662" width="54" height="30"/>
+                                <rect key="frame" x="340" y="652" width="54" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="as4-Y2-AEG">
-                                <rect key="frame" x="20" y="790" width="374" height="34.5"/>
+                                <rect key="frame" x="20" y="780" width="374" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ödeme Yap">
                                     <color key="baseBackgroundColor" name="mainColor"/>
@@ -491,11 +644,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U9Q-uh-v09" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Ua6-Yy-BY9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3070" y="411"/>
+            <point key="canvasLocation" x="4017" y="380"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2zF-kD-Kr5"/>
+        <segue reference="fAj-5v-0RM"/>
+        <segue reference="7VO-VN-hU0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>

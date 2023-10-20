@@ -13,9 +13,11 @@ import UIKit
 class HomePageViewModel {
     var frepo = FoodStoreDaoRepository()
     var yemekListesi = BehaviorSubject<[FoodsModel]>(value: [FoodsModel]())
+    var cartList = BehaviorSubject<[CartFoodModel]>(value: [CartFoodModel]())
     
     init(){
         yemekListesi = frepo.foodsList
+        cartList = frepo.cartList
     }
     
     func yemekleriListele(){

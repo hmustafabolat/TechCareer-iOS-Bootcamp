@@ -35,6 +35,7 @@ class FoodStoreDaoRepository {
                 }
             }catch{
                 print(error.localizedDescription)
+                print("Hata oluştu: \(error)")
                 }
             }
         }

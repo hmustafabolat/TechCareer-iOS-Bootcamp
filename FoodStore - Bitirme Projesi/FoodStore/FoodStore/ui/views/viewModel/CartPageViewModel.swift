@@ -29,6 +29,9 @@ class CartPageViewModel{
     }
     
     func calculatePrice(price: Int) {
-        frepo.calculatePrice(price: price)
+        frepo.calculatePrice(price: price) 
+        
     }
+    
+    
 }
