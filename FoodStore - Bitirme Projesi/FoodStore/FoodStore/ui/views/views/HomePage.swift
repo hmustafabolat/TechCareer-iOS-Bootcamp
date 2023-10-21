@@ -14,7 +14,8 @@ class HomePage: UIViewController {
     @IBOutlet weak var yemeklerCollectionView: UICollectionView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
+
+    @IBOutlet weak var userName: UILabel!
     
     var yemeklerListesi = [FoodsModel]()
        var yemeklerViewModel = HomePageViewModel()
