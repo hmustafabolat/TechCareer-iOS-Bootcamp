@@ -34,8 +34,16 @@ class LoginPage: UIViewController {
                     case .failure(let error):
                         // Oturum açma hatası
                         print("Oturum açma hatası: \(error.localizedDescription)")
+                        self?.showErrorAlert(message: "Kullanıcı Adı veya Şifre Hatalı")
                     }
                 }
+    }
+    
+    func showErrorAlert(message: String) {
+        let alert = UIAlertController(title: "Hata", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Tamam", style: .default, handler: nil)
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func registerButton(_ sender: Any) {

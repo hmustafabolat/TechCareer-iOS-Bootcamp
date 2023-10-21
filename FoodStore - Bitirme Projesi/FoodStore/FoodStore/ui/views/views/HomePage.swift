@@ -14,8 +14,6 @@ class HomePage: UIViewController {
     @IBOutlet weak var yemeklerCollectionView: UICollectionView!
     
     @IBOutlet weak var searchBar: UISearchBar!
-
-    @IBOutlet weak var userName: UILabel!
     
     var yemeklerListesi = [FoodsModel]()
        var yemeklerViewModel = HomePageViewModel()
@@ -23,9 +21,6 @@ class HomePage: UIViewController {
        var cartLists = [CartFoodModel]()
        var foods:FoodsModel?
 
-
-
-    
     override func viewDidLoad() {
             super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
@@ -49,10 +44,13 @@ class HomePage: UIViewController {
             viewModel.sepettekiYemekleriGoruntule(kullanici_adi: "mustafa")
             
         }
+    
+        
         
         func design(){
             yemeklerCollectionView.delegate = self
             yemeklerCollectionView.dataSource = self
+        
             
             let design = UICollectionViewFlowLayout()
             design.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -148,3 +146,6 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
         performSegue(withIdentifier: "toDetail", sender: yemek)
     }
 }
+
+
+

@@ -14,6 +14,8 @@ class HomePageViewModel {
     var frepo = FoodStoreDaoRepository()
     var yemekListesi = BehaviorSubject<[FoodsModel]>(value: [FoodsModel]())
     var cartList = BehaviorSubject<[CartFoodModel]>(value: [CartFoodModel]())
+    var filteredFoodList = [FoodsModel]()
+    var search: Bool = false
     
     init(){
         yemekListesi = frepo.foodsList
@@ -38,4 +40,7 @@ class HomePageViewModel {
         frepo.sepeteYemekEkle(yemek_adi: yemek_adi, yemek_resim_adi: yemek_resim_adi, yemek_fiyat: yemek_fiyat, yemek_siparis_sayisi: yemek_siparis_sayisi, kullanici_adi: kullanici_adi)
     }
     
+
+    
+        
 }
