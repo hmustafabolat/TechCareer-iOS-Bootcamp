@@ -16,13 +16,19 @@ class HomePage: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var yemeklerListesi = [FoodsModel]()
+    var frepo = FoodStoreDaoRepository()
        var yemeklerViewModel = HomePageViewModel()
        var viewModel = DetailViewModel()
        var cartLists = [CartFoodModel]()
        var foods:FoodsModel?
-
+    
+   
+    
+    
+    
     override func viewDidLoad() {
             super.viewDidLoad()
+        
         self.navigationItem.setHidesBackButton(true, animated: true)
             searchBar.backgroundImage = UIImage() // Kenarları kaldırır
             searchBar.layer.borderWidth = 1 // Opsiyonel: Çerçeve kalınlığını ayarlar
@@ -62,6 +68,7 @@ class HomePage: UIViewController {
             yemeklerCollectionView.collectionViewLayout = design
             
         }
+
         
         func sepeteEkleTikla(indexPath: IndexPath) {
             _ = yemeklerListesi[indexPath.row]
@@ -113,6 +120,8 @@ class HomePage: UIViewController {
     
 }
 
+
+
 extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, HucreProtocol{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -146,6 +155,8 @@ extension HomePage : UICollectionViewDelegate, UICollectionViewDataSource, Hucre
         performSegue(withIdentifier: "toDetail", sender: yemek)
     }
 }
+
+
 
 
 

@@ -73,9 +73,9 @@ extension CartPage: UITableViewDelegate, UITableViewDataSource {
             hucre.cartFoodImage.kf.setImage(with: url)
         }
 
-        hucre.cartFoodPrice.text = yemek.yemek_fiyat
+        hucre.cartFoodPrice.text = "Birim Fiyat: \(String(describing: yemek.yemek_fiyat!)) ₺"
         hucre.cartFoodTotalPrice.text = "\(Int(yemek.yemek_fiyat!)! * Int(yemek.yemek_siparis_adet!)!)₺"
-        hucre.cartFoodPiece.text = yemek.yemek_siparis_adet
+        hucre.cartFoodPiece.text = "\(String(describing: yemek.yemek_siparis_adet!)) Adet"
         hucre.cartDeleteButton.addTarget(self, action: #selector(deleteButtonTapped(_:)), for: .touchUpInside)
         
         

@@ -126,6 +126,8 @@ class FoodStoreDaoRepository {
         }
     }
     
+   
+    
     func increaseFoodCount() {
         let newCount = (try? foodCount.value()) ?? 1
         foodCount.onNext(newCount + 1)
